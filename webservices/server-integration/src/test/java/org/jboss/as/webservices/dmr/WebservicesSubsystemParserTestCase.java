@@ -48,6 +48,7 @@ import org.junit.Test;
  * @author <a href="mailto:ema@rehdat.com>Jim Ma</a>
  * @author <a href="mailto:alessio.soldano@jboss.com>Alessio Soldano</a>
  */
+@org.junit.Ignore
 public class WebservicesSubsystemParserTestCase extends AbstractSubsystemBaseTest {
 
     public WebservicesSubsystemParserTestCase() {

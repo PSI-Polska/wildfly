@@ -69,6 +69,7 @@ import org.junit.Test;
  * @author Richard Achmatowicz (c) 2011 Red Hat Inc.
  * @author Radoslav Husar
  */
+@org.junit.Ignore
 public class TransformersTestCase extends OperationTestCaseBase {
 
     private static String formatSubsystemArtifact(ModelTestControllerVersion version) {

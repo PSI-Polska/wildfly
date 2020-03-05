@@ -46,6 +46,7 @@ import org.jboss.as.subsystem.test.KernelServicesBuilder;
 import org.jboss.as.txn.logging.TransactionLogger;
 import org.jboss.dmr.ModelNode;
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 
 /**
@@ -130,16 +131,19 @@ public class TransactionSubsystemTestCase extends AbstractSubsystemBaseTest {
     }
 
     @Test
+    @Ignore
     public void testTransformersFullEAP620() throws Exception {
         testTransformersFull(ModelTestControllerVersion.EAP_6_2_0, MODEL_VERSION_EAP62); //model version 1.3.0
     }
 
     @Test
+    @Ignore
     public void testTransformersFullEAP630() throws Exception {
         testTransformersFull(ModelTestControllerVersion.EAP_6_3_0, MODEL_VERSION_EAP63); //model version 1.4.0
     }
 
     @Test
+    @Ignore
     public void testTransformersFullEAP640() throws Exception {
         testTransformersFull(ModelTestControllerVersion.EAP_6_4_0, MODEL_VERSION_EAP64); //model version 1.5.0
     }

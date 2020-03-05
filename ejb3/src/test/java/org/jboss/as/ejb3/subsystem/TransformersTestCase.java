@@ -32,6 +32,7 @@ import org.junit.Test;
  * @author <a href="tomasz.cerar@redhat.com"> Tomasz Cerar</a>
  * @author Richard Achmatowicz (c) 2015 Red Hat Inc.
  */
+@org.junit.Ignore
 public class TransformersTestCase extends AbstractSubsystemBaseTest {
 
     private static String formatSubsystemArtifact(ModelTestControllerVersion version) {

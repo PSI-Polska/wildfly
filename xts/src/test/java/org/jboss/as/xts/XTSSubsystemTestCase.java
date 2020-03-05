@@ -39,6 +39,7 @@ import org.junit.Test;
 /**
  * @author <a href="kabir.khan@jboss.com">Kabir Khan</a>
  */
+@org.junit.Ignore
 public class XTSSubsystemTestCase extends AbstractSubsystemBaseTest {
 
     public XTSSubsystemTestCase() {

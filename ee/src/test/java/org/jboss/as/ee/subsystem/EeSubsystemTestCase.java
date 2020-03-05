@@ -52,6 +52,7 @@ import org.junit.Test;
  * @author <a href="kabir.khan@jboss.com">Kabir Khan</a>
  * @author Eduardo Martins
  */
+@org.junit.Ignore
 public class EeSubsystemTestCase extends AbstractSubsystemBaseTest {
 
     public EeSubsystemTestCase() {

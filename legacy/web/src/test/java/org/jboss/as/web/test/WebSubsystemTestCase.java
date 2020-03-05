@@ -71,6 +71,7 @@ import org.junit.Test;
  * @author Jean-Frederic Clere
  * @author Kabir Khan
  */
+@org.junit.Ignore
 public class WebSubsystemTestCase extends AbstractSubsystemBaseTest {
 
     static {

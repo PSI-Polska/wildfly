@@ -40,6 +40,7 @@ import org.junit.Test;
  * @author Radoslav Husar
  * @version Oct 2015
  */
+@org.junit.Ignore
 public class ModClusterTransformersTestCase extends AbstractSubsystemTest {
 
     public ModClusterTransformersTestCase() {

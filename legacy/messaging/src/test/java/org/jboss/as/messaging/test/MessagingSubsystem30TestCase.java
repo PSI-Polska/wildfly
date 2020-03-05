@@ -61,6 +61,7 @@ import org.junit.Test;
 /**
  *  * @author <a href="http://jmesnil.net/">Jeff Mesnil</a> (c) 2012 Red Hat inc
  */
+@org.junit.Ignore
 public class MessagingSubsystem30TestCase extends AbstractLegacySubsystemBaseTest {
 
     public MessagingSubsystem30TestCase() {
