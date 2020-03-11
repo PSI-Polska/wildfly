@@ -278,7 +278,7 @@
                     <scripts>
                         <script>${ts.restore.default.configuration.cli}</script>
                     </scripts>
-                    <jboss-home>${project.build.directory}/wildfly</jboss-home>
+                    <jboss-home>${project.build.directory}/jbossas</jboss-home>
                     <stdout>none</stdout>
                     <java-opts>${modular.jdk.args}</java-opts>
                     <system-properties>

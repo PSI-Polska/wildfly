@@ -9,7 +9,7 @@ embed-host-controller
         user-name="sa",\
         password="sa")
 /profile=default/subsystem=ee/service=default-bindings:write-attribute(name="datasource",value="java:jboss/datasources/ExampleDS")
-/profile=default/subsystem=undertow/server=default-server/https-listener=https:write-attribute(name="security-realm",value="ApplicationRealm")
+/profile=default/subsystem=undertow/server=default-server/https-listener=httpsListener:write-attribute(name="security-realm",value="ApplicationRealm")
 /profile=default/subsystem=undertow/configuration=handler/file=welcome-content:add(path="${jboss.home.dir}/welcome-content")
 /profile=default/subsystem=undertow/server=default-server/host=default-host/location="/":add(handler="welcome-content")
 /profile=default/subsystem=undertow/servlet-container=default:undefine-attribute(name="stack-trace-on-error")
@@ -23,7 +23,7 @@ embed-host-controller
         user-name="sa",\
         password="sa")
 /profile=full/subsystem=ee/service=default-bindings:write-attribute(name="datasource",value="java:jboss/datasources/ExampleDS")
-/profile=full/subsystem=undertow/server=default-server/https-listener=https:write-attribute(name="security-realm",value="ApplicationRealm")
+/profile=full/subsystem=undertow/server=default-server/https-listener=httpsListener:write-attribute(name="security-realm",value="ApplicationRealm")
 /profile=full/subsystem=undertow/configuration=handler/file=welcome-content:add(path="${jboss.home.dir}/welcome-content")
 /profile=full/subsystem=undertow/server=default-server/host=default-host/location="/":add(handler="welcome-content")
 /profile=full/subsystem=undertow/servlet-container=default:undefine-attribute(name="stack-trace-on-error")
@@ -37,7 +37,7 @@ embed-host-controller
         user-name="sa",\
         password="sa")
 /profile=full-ha/subsystem=ee/service=default-bindings:write-attribute(name="datasource",value="java:jboss/datasources/ExampleDS")
-/profile=full-ha/subsystem=undertow/server=default-server/https-listener=https:write-attribute(name="security-realm",value="ApplicationRealm")
+/profile=full-ha/subsystem=undertow/server=default-server/https-listener=httpsListener:write-attribute(name="security-realm",value="ApplicationRealm")
 /profile=full-ha/subsystem=undertow/configuration=handler/file=welcome-content:add(path="${jboss.home.dir}/welcome-content")
 /profile=full-ha/subsystem=undertow/server=default-server/host=default-host/location="/":add(handler="welcome-content")
 /profile=full-ha/subsystem=undertow/servlet-container=default:undefine-attribute(name="stack-trace-on-error")
@@ -51,7 +51,7 @@ embed-host-controller
         user-name="sa",\
         password="sa")
 /profile=ha/subsystem=ee/service=default-bindings:write-attribute(name="datasource",value="java:jboss/datasources/ExampleDS")
-/profile=ha/subsystem=undertow/server=default-server/https-listener=https:write-attribute(name="security-realm",value="ApplicationRealm")
+/profile=ha/subsystem=undertow/server=default-server/https-listener=httpsListener:write-attribute(name="security-realm",value="ApplicationRealm")
 /profile=ha/subsystem=undertow/configuration=handler/file=welcome-content:add(path="${jboss.home.dir}/welcome-content")
 /profile=ha/subsystem=undertow/server=default-server/host=default-host/location="/":add(handler="welcome-content")
 /profile=ha/subsystem=undertow/servlet-container=default:undefine-attribute(name="stack-trace-on-error")

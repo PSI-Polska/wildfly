@@ -52,7 +52,7 @@
         <xslt.scripts.dir>${basedir}/../integration/src/test/xslt</xslt.scripts.dir>
         <surefire.excludeTests />
 
-        <ts.restore.default.configuration.cli>${jbossas.ts.dir}/shared/restore-default-configuration</ts.restore.default.configuration.cli>
+        <ts.restore.default.configuration.cli>${jbossas.ts.dir}/shared/restore-default-configuration.cli</ts.restore.default.configuration.cli>
     </properties>
 
     <!--
@@ -242,12 +242,12 @@
                     <scripts>
                         <script>${ts.restore.default.configuration.cli}</script>
                     </scripts>
-                    <jboss-home>${project.build.directory}\wildfly</jboss-home>
+                    <jboss-home>${project.build.directory}/jbossas</jboss-home>
                     <stdout>none</stdout>
                     <java-opts>${modular.jdk.args}</java-opts>
                     <system-properties>
                         <maven.repo.local>${settings.localRepository}</maven.repo.local>
-                        <module.path>${jboss.dist}\modules</module.path>
+                        <module.path>${jboss.dist}/modules</module.path>
                     </system-properties>
                 </configuration>
             </plugin>

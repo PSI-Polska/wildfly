@@ -15,7 +15,7 @@ embed-server --server-config=standalone-ha.xml
 
 /subsystem=ee/service=default-bindings:write-attribute(name="datasource",value="java:jboss/datasources/ExampleDS")
 
-/subsystem=undertow/server=default-server/https-listener=https:write-attribute(name="security-realm",value="ApplicationRealm")
+/subsystem=undertow/server=default-server/https-listener=httpsListener:write-attribute(name="security-realm",value="ApplicationRealm")
 
 /subsystem=undertow/configuration=handler/file=welcome-content:add(path="${jboss.home.dir}/welcome-content")
 /subsystem=undertow/server=default-server/host=default-host/location="/":add(handler="welcome-content")
@@ -41,15 +41,9 @@ embed-server --server-config=standalone-full-ha.xml
 
 /subsystem=ee/service=default-bindings:write-attribute(name="datasource",value="java:jboss/datasources/ExampleDS")
 
-/subsystem=undertow/server=default-server/https-listener=https:write-attribute(name="security-realm",value="ApplicationRealm")
+/subsystem=undertow/server=default-server/https-listener=httpsListener:write-attribute(name="security-realm",value="ApplicationRealm")
 /subsystem=undertow/configuration=handler/file=welcome-content:add(path="${jboss.home.dir}/welcome-content")
 /subsystem=undertow/server=default-server/host=default-host/location="/":add(handler="welcome-content")
 /subsystem=undertow/servlet-container=default:undefine-attribute(name="stack-trace-on-error")
-
-/socket-binding-group=standard-sockets/socket-binding=iiop/:add(interface="unsecure",port="3528")
-/socket-binding-group=standard-sockets/socket-binding=iiop-ssl/:add(interface="unsecure",port="3529")
-/extension=org.wildfly.iiop-openjdk:add()
-/subsystem=iiop-openjdk:add(socket-binding="iiop",security="identity",transactions="spec",server-requires-ssl="false",client-requires-ssl="false")
-/subsystem=ejb3/service=iiop:add(enable-by-default="false",use-qualified-name="false")
 
 stop-embedded-server
