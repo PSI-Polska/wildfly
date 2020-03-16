@@ -44,6 +44,7 @@ import org.junit.runner.RunWith;
  */
 @RunWith(Arquillian.class)
 @RunAsClient
+@org.junit.Ignore("COM_WILDFLY-247")
 public class JaxrsYamlProviderTestCase {
 
       @Deployment

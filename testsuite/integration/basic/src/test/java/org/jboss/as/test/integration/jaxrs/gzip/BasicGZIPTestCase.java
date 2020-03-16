@@ -53,6 +53,7 @@ import org.junit.runner.RunWith;
  */
 @RunWith(Arquillian.class)
 @RunAsClient
+@org.junit.Ignore("COM_WILDFLY-247")
 public class BasicGZIPTestCase {
 
     private static final Properties gzipProp = new Properties();
