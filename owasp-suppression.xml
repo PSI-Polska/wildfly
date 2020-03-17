@@ -150,4 +150,9 @@
         <packageUrl regex="true">^pkg:maven/org\.jboss\.xnio\.netty/netty\-xnio\-transport@.*$</packageUrl>
         <cve>CVE-2015-2156</cve>
     </suppress>
+    <!-- The vulnerable dependency is Apache Directory LDAP API versions prior to 1.0.2.  It's not exploitable, because it's a dependency from WildFly test suite. -->
+    <suppress>
+        <gav regex="true">^org\.apache\.directory\.api:.*:.*$</gav>
+        <cve>CVE-2018-1337</cve>
+    </suppress>
 </suppressions>
