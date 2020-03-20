@@ -173,4 +173,12 @@
         <vulnerabilityName>CVE-2019-16335</vulnerabilityName>
         <vulnerabilityName>CVE-2019-17267</vulnerabilityName>
     </suppress>
+    <!-- According to https://bugzilla.redhat.com/show_bug.cgi?id=1400644 CVE-2016-9606 was fixed in resteasy 3.0.22 -->
+    <suppress>
+        <notes><![CDATA[
+        file name: resteasy-jaxrs-3.0.25-1-PSI.jar
+        ]]></notes>
+        <packageUrl regex="true">^pkg:maven/org\.jboss\.resteasy/resteasy\-jaxrs@.*$</packageUrl>
+        <vulnerabilityName>CVE-2016-9606</vulnerabilityName>
+     </suppress>
 </suppressions>
