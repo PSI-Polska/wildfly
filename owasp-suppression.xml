@@ -485,13 +485,30 @@
         <packageUrl regex="true">^pkg:maven/org\.apache\.cxf.*$</packageUrl>
         <cve>CVE-2021-22696</cve>
     </suppress>
-
+	<!--CVE-2018-1051 This won't be fixed in JBoss EAP as the YamlProvider in RESTEasy is unsupported.-->
+	<suppress>
+		<notes><![CDATA[
+		file name: resteasy-yaml-provider-3.12.0.Final.jar
+		]]></notes>
+		<packageUrl regex="true">^pkg:maven/org\.jboss\.resteasy/resteasy\-yaml\-provider@.*$</packageUrl>
+		<cve>CVE-2018-1051</cve>
+	</suppress>
+	<!-- CVE-2017-12629 JBoss Enterprise Application Platform 7 is not affected by this flaw -->
+	<suppress>
+		<notes><![CDATA[
+		file name: lucene-queryparser-5.5.5.jar
+		]]></notes>
+		<packageUrl regex="true">^pkg:maven/org\.apache\.lucene/lucene\-queryparser@.*$</packageUrl>
+		<cve>CVE-2017-12629</cve>
+	</suppress>
     <!-- False positive - mina-core has nothing to do with mina-sshd where bug was spotted and fixed https://bugzilla.redhat.com/show_bug.cgi?id=1981527 -->
-    <suppress>
+    <!-- CVE-2019-0231 False positive - apacheds-all is only used in tests-->
+	<suppress>
         <notes><![CDATA[
-   file name: apacheds-all-2.0.0-M24.jar (shaded: org.apache.mina:mina-core:2.0.16)
-   ]]></notes>
+		file name: apacheds-all-2.0.0-M24.jar (shaded: org.apache.mina:mina-core:2.0.16)
+        ]]></notes>
         <packageUrl regex="true">^pkg:maven/org\.apache\.mina/mina\-core@.*$</packageUrl>
+	    <cve>CVE-2019-0231</cve>
         <cve>CVE-2021-30129</cve>
     </suppress>
 
