@@ -694,6 +694,7 @@
         <packageUrl regex="true">^pkg:javascript/bootstrap@.*$</packageUrl>
         <cve>CVE-2022-24785</cve>
     </suppress>
+    <!-- Wildfly21 doesn't use vulnerable gson classes affected by CVE-2022-25647 via protostream  -->
     <suppress>
         <notes><![CDATA[
    file name: protostream-4.3.4.Final.jar (shaded: com.google.code.gson:gson:2.8.5)
