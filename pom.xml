@@ -269,8 +269,8 @@
         <version.com.h2database>1.4.197</version.com.h2database>
         <version.com.microsoft.azure>8.6.5</version.com.microsoft.azure>
         <version.com.nimbus.jose-jwt>8.22</version.com.nimbus.jose-jwt>
-        <version.com.squareup.okhttp3>3.9.0</version.com.squareup.okhttp3>
-        <version.com.squareup.okio>1.17.5</version.com.squareup.okio>
+        <version.com.squareup.okhttp3>4.9.3</version.com.squareup.okhttp3>
+        <version.com.squareup.okio>2.8.0</version.com.squareup.okio>
         <version.com.sun.activation.jakarta.activation>1.2.1</version.com.sun.activation.jakarta.activation>
         <version.com.sun.faces>2.3.14.SP01</version.com.sun.faces>
         <version.com.sun.istack>3.0.10</version.com.sun.istack>
@@ -9044,10 +9044,28 @@
                 <scope>test</scope>
             </dependency>
 
-           <dependency>
+            <dependency>
                 <groupId>${ee.maven.groupId}</groupId>
                 <artifactId>wildfly-ormtransformer</artifactId>
                 <version>${ee.maven.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.jetbrains.kotlin</groupId>
+                <artifactId>kotlin-stdlib</artifactId>
+                <version>${version.kotlin-stdlib}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.jetbrains.kotlin</groupId>
+                <artifactId>kotlin-stdlib-common</artifactId>
+                <version>${version.kotlin-stdlib}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.jetbrains.kotlin</groupId>
+                <artifactId>kotlin-stdlib-jdk8</artifactId>
+                <version>${version.kotlin-stdlib}</version>
             </dependency>
 
         </dependencies>
