@@ -274,6 +274,7 @@
         <version.javax.validation>2.0.1.Final</version.javax.validation>
         <version.jaxen>1.1.6</version.jaxen>
         <version.jboss.jaxbintros>1.0.2.GA</version.jboss.jaxbintros>
+        <version.jetbrains.annotations>13.0</version.jetbrains.annotations>
         <version.joda-time>2.9.7</version.joda-time>
         <version.jsoup>1.14.2</version.jsoup>
         <version.kotlin-stdlib>1.4.32</version.kotlin-stdlib>
@@ -6730,6 +6731,12 @@
                 <groupId>org.jetbrains.kotlin</groupId>
                 <artifactId>kotlin-stdlib-jdk8</artifactId>
                 <version>${version.kotlin-stdlib}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.jetbrains</groupId>
+                <artifactId>annotations</artifactId>
+                <version>${version.jetbrains.annotations}</version>
             </dependency>
 
         </dependencies>
