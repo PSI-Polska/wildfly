@@ -511,8 +511,7 @@
        <packageUrl regex="true">^pkg:maven/org\.jboss\.resteasy\.microprofile/microprofile\-.*@.*$</packageUrl>
        <cve>CVE-2016-9606</cve>
     </suppress>    
-
-      
+ 
     <!-- According to RedHat this is fixed in the current version https://issues.redhat.com/browse/WFLY-16229, see also: https://github.com/advisories/GHSA-57j2-w4cx-62h2, https://bugzilla.redhat.com/show_bug.cgi?id=2064698 -->
     <!-- I've double checked with dependency tree and there is only com.fasterxml.jackson.core:jackson-databind:jar:2.12.6.1 used -->
     <suppress>
