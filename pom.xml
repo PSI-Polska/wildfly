@@ -9972,6 +9972,8 @@
                 <version>${ee.maven.version}</version>
             </dependency>
 
+        </dependencies>
+
     </dependencyManagement>
 
     <repositories>
