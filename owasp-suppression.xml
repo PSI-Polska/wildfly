@@ -522,6 +522,37 @@
        <packageUrl regex="true">^pkg:maven/com\.fasterxml\.jackson\.core/jackson\-databind@.*$</packageUrl>
        <cve>CVE-2020-36518</cve>
     </suppress>  
+
+    <!-- The io.undertow system is vulnerable, but not org.wildfly.security.elytron-web:undertow-server which integrates Elytron with Undertow -->
+    <!-- The io.undertow is in version 2.2.17 which is higher then vulnerable prior to 2.2.11.Final -->
+    <suppress>
+        <notes><![CDATA[
+   file name: undertow-server-1.10.1.Final.jar, undertow-server-servlet-2.0.0.Beta1.jar
+   ]]></notes>
+        <packageUrl regex="true">^pkg:maven/org\.wildfly\.security\.elytron\-web/undertow\-server.*$</packageUrl>
+        <cve>CVE-2021-3629</cve>
+        <cve>CVE-2021-3597</cve>
+        <cve>CVE-2020-10687</cve>
+        <cve>CVE-2021-20220</cve>
+    </suppress>
+    <suppress>
+        <notes><![CDATA[
+   file name: wildfly-plugin-core-2.0.2.Final.jar
+   ]]></notes>
+        <packageUrl regex="true">^pkg:maven/org\.wildfly\.plugins/wildfly\-plugin\-core@.*$</packageUrl>
+        <cve>CVE-2021-3629</cve>
+    </suppress>
+
+    <!-- Vulnerability is in wildfly-core up to 17.0 but we are using 18.x.  -->
+    <!-- This is false positive because cve regex matches a different package: wildfly-plugin-core -->
+    <suppress>
+        <notes><![CDATA[
+   file name: wildfly-plugin-core-2.0.2.Final.jar
+   ]]></notes>
+        <packageUrl regex="true">^pkg:maven/org\.wildfly\.plugins/wildfly\-plugin\-core@.*$</packageUrl>
+        <cve>CVE-2021-3717</cve>
+    </suppress>
+
     <!-- According to author of okhttp this vulnerability can only be exploited when the vulnerable method is called directly, which it isn't in WF. See https://github.com/square/okhttp/issues/6724#issuecomment-866701186  -->   
 	<suppress>
         <notes><![CDATA[
@@ -529,5 +560,6 @@
         ]]></notes>
         <packageUrl regex="true">^pkg:maven/com\.squareup\.okhttp3/okhttp@.*$</packageUrl>
         <vulnerabilityName>CVE-2021-0341</vulnerabilityName>
-     </suppress>
+    </suppress>
+
 </suppressions>
