@@ -306,8 +306,8 @@
         <version.com.ibm.async.asyncutil>0.1.0</version.com.ibm.async.asyncutil>
         <version.com.microsoft.azure>8.6.6</version.com.microsoft.azure>
         <version.com.nimbus.jose-jwt>8.11</version.com.nimbus.jose-jwt>
-        <version.com.squareup.okhttp3>4.9.3</version.com.squareup.okhttp3>
-        <version.com.squareup.okio>2.8.0</version.com.squareup.okio>
+        <version.com.squareup.okhttp3>3.14.9</version.com.squareup.okhttp3>
+        <version.com.squareup.okio>1.17.5</version.com.squareup.okio>
         <version.com.sun.activation.jakarta.activation>1.2.2</version.com.sun.activation.jakarta.activation>
         <version.com.sun.faces>2.3.17.SP01</version.com.sun.faces>
         <version.com.sun.istack>3.0.12</version.com.sun.istack>
@@ -364,10 +364,8 @@
         <version.jakarta.jws.jakarta.jws-api>2.1.0</version.jakarta.jws.jakarta.jws-api>
         <version.jaxen>1.1.6</version.jaxen>
         <version.jboss.jaxbintros>1.0.3.GA</version.jboss.jaxbintros>
-        <version.jetbrains.annotations>13.0</version.jetbrains.annotations>
         <version.joda-time>2.10.14</version.joda-time>
         <version.jsoup>1.14.2</version.jsoup>
-        <version.kotlin-stdlib>1.6.0</version.kotlin-stdlib>
         <version.net.jcip>1.0</version.net.jcip>
         <version.net.shibboleth.utilities.java-support>7.3.0</version.net.shibboleth.utilities.java-support>
         <version.org.apache.activemq.artemis>2.19.1</version.org.apache.activemq.artemis>
@@ -9973,29 +9971,6 @@
                 <artifactId>wildfly-ormtransformer</artifactId>
                 <version>${ee.maven.version}</version>
             </dependency>
-            <dependency>
-                <groupId>org.jetbrains.kotlin</groupId>
-                <artifactId>kotlin-stdlib</artifactId>
-                <version>${version.kotlin-stdlib}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.jetbrains.kotlin</groupId>
-                <artifactId>kotlin-stdlib-common</artifactId>
-                <version>${version.kotlin-stdlib}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.jetbrains.kotlin</groupId>
-                <artifactId>kotlin-stdlib-jdk8</artifactId>
-                <version>${version.kotlin-stdlib}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.jetbrains</groupId>
-                <artifactId>annotations</artifactId>
-                <version>${version.jetbrains.annotations}</version>
-            </dependency>
-        </dependencies>
 
     </dependencyManagement>
 
