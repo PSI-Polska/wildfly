@@ -42,7 +42,7 @@ end-if
 
 
 # set samesite-cookie to strict via filter
-/subsystem=undertow/configuration=filter/expression-filter=samesite-cookie:add(module=samesite-cookie, expression="samesite-cookie\(mode\=strict\)")
-/subsystem=undertow/server=default-server/host=default-host/filter-ref=samesite-cookie:add
+# /subsystem=undertow/configuration=filter/expression-filter=samesite-cookie:add(module=samesite-cookie, expression="samesite-cookie\(mode\=strict\)")
+# /subsystem=undertow/server=default-server/host=default-host/filter-ref=samesite-cookie:add
 
 stop-embedded-server
