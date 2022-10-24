@@ -953,6 +953,7 @@
 		]]></notes>
         <packageUrl regex="true">^pkg:maven/org\.wildfly\.security\.elytron\-web/undertow\-server\-servlet@.*$</packageUrl>
         <cve>CVE-2021-1259</cve>
+        <cve>CVE-2022-1319</cve>
     </suppress>
     <suppress>
         <notes><![CDATA[
@@ -960,5 +961,6 @@
 		]]></notes>
         <packageUrl regex="true">^pkg:maven/io\.undertow/undertow\-websockets\-jsr@.*$</packageUrl>
         <cve>CVE-2021-1259</cve>
+        <cve>CVE-2022-1319</cve>
     </suppress>
 </suppressions>
