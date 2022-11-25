@@ -1690,7 +1690,7 @@
         </license>
       </licenses>
     </dependency>
-    <dependency>
+   <!-- <dependency>
       <groupId>org.codehaus.jackson</groupId>
       <artifactId>jackson-xc</artifactId>
       <licenses>
@@ -1700,7 +1700,7 @@
           <distribution>repo</distribution>
         </license>
       </licenses>
-    </dependency>
+    </dependency>-->
     <dependency>
       <groupId>org.codehaus.jettison</groupId>
       <artifactId>jettison</artifactId>

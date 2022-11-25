@@ -1887,10 +1887,10 @@
             <artifactId>jackson-jaxrs</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>org.codehaus.jackson</groupId>
-            <artifactId>jackson-xc</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.codehaus.jackson</groupId>-->
+<!--            <artifactId>jackson-xc</artifactId>-->
+<!--        </dependency>-->
 
         <dependency>
             <groupId>org.codehaus.jettison</groupId>
