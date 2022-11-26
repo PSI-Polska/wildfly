@@ -5633,11 +5633,11 @@
                 <version>${version.org.codehaus.jackson}</version>
             </dependency>
 
-            <dependency>
+           <!-- <dependency>
                 <groupId>com.fasterxml.jackson.module</groupId>
                 <artifactId>jackson-module-jaxb-annotations</artifactId>
                 <version>${version.org.codehaus.jackson}</version>
-            </dependency>
+            </dependency>-->
 
             <dependency>
                 <groupId>org.codehaus.jettison</groupId>
