@@ -986,4 +986,11 @@
         <packageUrl regex="true">^pkg:maven/org\.glassfish/jakarta\.el@.*$</packageUrl>
         <vulnerabilityName>CVE-2021-28170</vulnerabilityName>
     </suppress>
+    <suppress>
+        <notes><![CDATA[
+   file name: woodstox-core-6.4.0.jar (shaded: com.sun.xml.bind.jaxb:isorelax:20090621)
+   ]]></notes>
+        <packageUrl regex="true">^pkg:maven/com\.sun\.xml\.bind\.jaxb/isorelax@.*$</packageUrl>
+        <cve>CVE-2023-34411</cve>
+    </suppress>
 </suppressions>
