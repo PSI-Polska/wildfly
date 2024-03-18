@@ -64,34 +64,32 @@ jobs:
         java: ['11', '17', '21']
 
     steps:
-      - name: Checkout wildfly-core for WF 31
-        uses: actions/checkout@v4
-        if: contains(github.ref_name, 'PSI-31.x')
-        with:
-            repository: 'PSI-Polska/wildfly-core'
-            ref: 'PSI-23.x'
-            path: 'wildfly-core'
-
-      - name: Checkout wildfly-core for WF 26
-        uses: actions/checkout@v4
-        if: contains(github.ref_name, 'PSI-26.x')
-        with:
-            repository: 'PSI-Polska/wildfly-core'
-            ref: 'PSI-18.x'
-            path: 'wildfly-core'
-
-      - name: Checkout wildfly-core for WF 21
-        uses: actions/checkout@v4
-        if: contains(github.ref_name, 'PSI-21.x')
-        with:
-            repository: 'PSI-Polska/wildfly-core'
-            ref: 'PSI-13.0.x'
-            path: 'wildfly-core'
-
       - name: Checkout wildfly
         uses: actions/checkout@v4
         with:
           path: 'wildfly'
+
+      - name: Install XMLStarlet
+        run: sudo apt-get install -y xmlstarlet
+
+      - name: Extract wildfly-core version
+        id: wildfly-core-version
+        run: |
+          VERSION=$(xmlstarlet sel -N x=http://maven.apache.org/POM/4.0.0 -t -v '//x:project/x:properties/x:version.org.wildfly.core/text()' ./wildfly/pom.xml)
+          if [ ${VERSION%%.*} -eq 13 ]; then
+            BRANCH_NAME=PSI-13.0.x
+          else 
+            BRANCH_NAME=PSI-${VERSION%%.*}.x
+          fi
+          echo "WILDFLY_CORE_BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_OUTPUT
+          echo "Branch name: $BRANCH_NAME"
+
+      - name: Checkout wildfly-core ${{ steps.wildfly-core-version.outputs.WILDFLY_CORE_BRANCH_NAME }}
+        uses: actions/checkout@v4
+        with:
+          repository: 'PSI-Polska/wildfly-core'
+          ref: ${{ steps.wildfly-core-version.outputs.WILDFLY_CORE_BRANCH_NAME }}
+          path: 'wildfly-core'
 
       - name: Setup JRE ${{ matrix.java }} for building
         id: setup-java
