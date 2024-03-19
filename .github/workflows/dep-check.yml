@@ -56,18 +56,35 @@ jobs:
         run: |
           mvn -B -f wildfly/pom.xml clean install -DskipTests -Denforcer.skip=true -Dcheckstyle.skip=true
 
-      - name: Run dependency check
-        run: |
-          mvn -f wildfly-core/pom.xml org.owasp:dependency-check-maven:9.0.9:aggregate -Dformat=ALL -DfailOnError=false -DsuppressionFile="${{ github.workspace }}/wildfly-core/owasp-suppression.xml" -DnvdApiKey=${{ secrets.NVD_API_KEY }}
-          mvn -f wildfly/pom.xml org.owasp:dependency-check-maven:9.0.9:aggregate -Dformat=ALL -DfailOnError=false -DsuppressionFile="${{ github.workspace }}/wildfly/owasp-suppression.xml" -DnvdApiKey=${{ secrets.NVD_API_KEY }}
+      - name: Run wildfly-core dependency check
+        uses: dependency-check/Dependency-Check_Action@main
+        env:
+          # actions/setup-java changes JAVA_HOME so it needs to be reset to match the depcheck image
+          JAVA_HOME: /opt/jdk
+        with:
+          project: wildfly-core
+          path: wildfly-core
+          out: wildfly-core
+          format: 'HTML'
+          args: >
+            --nvdApiKey ${{ secrets.NVD_API_KEY }}
 
-          mv ./wildfly-core/target/dependency-check-report.html wildfly-${{ matrix.wildfly-version }}-core-dependency-check-report.html
-          mv ./wildfly/target/dependency-check-report.html wildfly-${{ matrix.wildfly-version }}-dependency-check-report.html
+      - name: Run wildfly dependency check
+        uses: dependency-check/Dependency-Check_Action@main
+        env:
+          JAVA_HOME: /opt/jdk
+        with:
+          project: wildfly
+          path: wildfly
+          out: wildfly
+          format: 'HTML'
+          args: >
+            --nvdApiKey ${{ secrets.NVD_API_KEY }}
           
       - name: Upload Reports
         uses: actions/upload-artifact@v4
         with:
           name: wildfly-${{ matrix.wildfly-version }}-dependency-check-reports
           path: |
-            wildfly-${{ matrix.wildfly-version }}-core-dependency-check-report.html
-            wildfly-${{ matrix.wildfly-version }}-dependency-check-report.html
+            wildfly-core/dependency-check-report.html
+            wildfly/dependency-check-report.html
