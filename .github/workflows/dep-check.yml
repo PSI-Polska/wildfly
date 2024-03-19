@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        wildfly-version: ['31', '26']
+        wildfly-version: ['31']
 
     steps:
       - name: Checkout wildfly PSI-${{ matrix.wildfly-version }}.x
@@ -58,16 +58,16 @@ jobs:
 
       - name: Run dependency check
         run: |
-          mvn -f wildfly-core/pom.xml org.owasp:dependency-check-maven:9.0.9:aggregate -Dformat=ALL -DfailOnError=false -DsuppressionFile="./wildfly-core/owasp-suppression.xml" -DnvdApiKey=${{ secrets.NVD_API_KEY }}
-          mvn -f wildfly/pom.xml org.owasp:dependency-check-maven:9.0.9:aggregate -Dformat=ALL -DfailOnError=false -DsuppressionFile="./wildfly/owasp-suppression.xml" -DnvdApiKey=${{ secrets.NVD_API_KEY }}
+          mvn -f wildfly-core/pom.xml org.owasp:dependency-check-maven:9.0.9:aggregate -Dformat=ALL -DfailOnError=false -DsuppressionFile="${{ github.workspace }}/wildfly-core/owasp-suppression.xml" -DnvdApiKey=${{ secrets.NVD_API_KEY }}
+          mvn -f wildfly/pom.xml org.owasp:dependency-check-maven:9.0.9:aggregate -Dformat=ALL -DfailOnError=false -DsuppressionFile="${{ github.workspace }}/wildfly/owasp-suppression.xml" -DnvdApiKey=${{ secrets.NVD_API_KEY }}
 
-          mv ./wildfly/target/dependency-check-report.html ./wildfly/target/wildfly-dependency-check-report.html
-          mv ./wildfly-core/target/dependency-check-report.html ./wildfly-core/target/wildfly-core-dependency-check-report.html
+          mv ./wildfly-core/target/dependency-check-report.html wildfly-${{ matrix.wildfly-version }}-core-dependency-check-report.html
+          mv ./wildfly/target/dependency-check-report.html wildfly-${{ matrix.wildfly-version }}-dependency-check-report.html
           
       - name: Upload Reports
         uses: actions/upload-artifact@v4
         with:
           name: wildfly-${{ matrix.wildfly-version }}-dependency-check-reports
           path: |
-            './wildfly/target/wildfly-dependency-check-report.html'
-            './wildfly-core/target/wildfly-core-dependency-check-report.html'
+            wildfly-${{ matrix.wildfly-version }}-core-dependency-check-report.html
+            wildfly-${{ matrix.wildfly-version }}-dependency-check-report.html
