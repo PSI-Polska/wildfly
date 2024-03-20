@@ -68,7 +68,7 @@ jobs:
           format: 'HTML'
           args: >
             --nvdApiKey ${{ secrets.NVD_API_KEY }}
-            --suppression wildfly-core/owasp-suppression.xml
+            --suppression ${{ github.workspace }}/wildfly-core/owasp-suppression.xml
 
       - name: Run wildfly dependency check
         uses: dependency-check/Dependency-Check_Action@main
@@ -81,7 +81,19 @@ jobs:
           format: 'HTML'
           args: >
             --nvdApiKey ${{ secrets.NVD_API_KEY }}
-            --suppression wildfly/owasp-suppression.xml
+            --suppression ${{ github.workspace }}/wildfly/owasp-suppression.xml
+
+      - name: Run dependency check using maven plugin
+        run: |
+          mvn -f wildfly-core/pom.xml org.owasp:dependency-check-maven:9.0.9:aggregate -Dformat=ALL -DfailOnError=false -DsuppressionFile="${{ github.workspace }}/wildfly-core/owasp-suppression.xml" -DnvdApiKey=${{ secrets.NVD_API_KEY }}
+          mvn -f wildfly/pom.xml org.owasp:dependency-check-maven:9.0.9:aggregate -Dformat=ALL -DfailOnError=false -DsuppressionFile="${{ github.workspace }}/wildfly/owasp-suppression.xml" -DnvdApiKey=${{ secrets.NVD_API_KEY }}
+
+          if [ -f wildfly-core/target/dependency-check-report.html ]; then
+            mv wildfly-core/target/dependency-check-report.html wildfly-${{ matrix.wildfly-version }}-core-dependency-check-report.html
+          fi
+          if [ -f wildfly/target/dependency-check-report.html ]; then
+            mv wildfly/target/dependency-check-report.html wildfly-${{ matrix.wildfly-version }}-dependency-check-report.html
+          fi
           
       - name: Upload Reports
         uses: actions/upload-artifact@v4
@@ -90,3 +102,5 @@ jobs:
           path: |
             wildfly-core/dependency-check-report.html
             wildfly/dependency-check-report.html
+            wildfly-${{ matrix.wildfly-version }}-core-dependency-check-report.html
+            wildfly-${{ matrix.wildfly-version }}-dependency-check-report.html
