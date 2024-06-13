@@ -269,4 +269,68 @@
        <cve>CVE-2020-10740</cve>
        <cve>CVE-2022-1278</cve>
     </suppress>
+
+    <!-- wildfly-glow-core used in tests, vulnerabilities up to (excluding) 27.0.0 -->
+    <suppress>
+        <notes><![CDATA[
+   file name: wildfly-glow-core-1.0.0.Beta5.jar
+   ]]></notes>
+        <packageUrl regex="true">^pkg:maven/org\.wildfly\.glow/wildfly\-glow\-.*@1.0.0.Beta5$</packageUrl>
+        <cve>CVE-2021-3717</cve>
+        <cve>CVE-2020-10718</cve>
+        <cve>CVE-2020-10740</cve>
+        <cve>CVE-2022-1278</cve>
+    </suppress>
+
+    <!-- Vulnerabilities up to (excluding) 22.0.7-->
+    <suppress>
+        <notes><![CDATA[
+   file name: wildfly-plugin-tools-1.0.0.Beta2.jar
+   ]]></notes>
+        <packageUrl regex="true">^pkg:maven/org\.wildfly\.plugins/wildfly\-plugin\-tools@.*$</packageUrl>
+        <cve>CVE-2020-10718</cve>
+        <cve>CVE-2020-10740</cve>
+        <cve>CVE-2022-1278</cve>
+    </suppress>
+
+    <!-- WF uses and provides versions 0.9.4 -->
+    <suppress>
+        <notes><![CDATA[
+   file name: wildfly-elytron-2.2.3.Final.jar (shaded: org.bitbucket.b_c:jose4j:0.9.3)
+   ]]></notes>
+        <packageUrl regex="true">^pkg:maven/org\.bitbucket\.b_c/jose4j@0.9.3$</packageUrl>
+        <cve>CVE-2023-51775</cve>
+    </suppress>
+
+    <!-- Keycloak dependencies used in tests, not included and provided by WildFly -->
+    <suppress>
+        <notes><![CDATA[
+   file name: keycloak-common-18.0.2.jar
+   ]]></notes>
+        <packageUrl regex="true">^pkg:maven/org\.keycloak/keycloak\-.*@18.0.2$</packageUrl>
+        <cve>CVE-2023-6563</cve>
+        <cve>CVE-2023-6291</cve>
+        <cve>CVE-2022-3916</cve>
+        <cve>CVE-2020-25689</cve>
+        <cve>CVE-2022-4361</cve>
+        <cve>CVE-2020-1719</cve>
+        <cve>CVE-2022-1274</cve>
+        <cve>CVE-2023-6134</cve>
+        <cve>CVE-2020-25640</cve>
+        <cve>CVE-2022-0866</cve>
+        <cve>CVE-2023-0264</cve>
+        <cve>CVE-2021-3536</cve>
+        <cve>CVE-2021-3503</cve>
+        <cve>CVE-2020-10740</cve>
+        <cve>CVE-2022-1278</cve>
+    </suppress>
+
+    <!-- OpenID is not part of WildFly nor WildFly Elytron -->
+    <suppress>
+        <notes><![CDATA[
+   file name: wildfly-elytron-oidc-client-subsystem-31.0.1-1-PSI-SNAPSHOT.jar
+   ]]></notes>
+        <packageUrl regex="true">^pkg:maven/org\.wildfly/wildfly\-elytron\-oidc\-client\-subsystem@.*$</packageUrl>
+        <cve>CVE-2007-1652</cve>
+    </suppress>
 </suppressions>
