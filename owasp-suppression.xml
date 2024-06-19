@@ -1385,6 +1385,20 @@
         <cve>CVE-2022-42003</cve>
         <cve>CVE-2022-42004</cve>
     </suppress>
+    <suppress>
+        <notes><![CDATA[
+   file name: jackson-jaxrs-1.9.13.redhat-00007.jar
+   ]]></notes>
+        <sha1>f6a2d11896492a2e717e225f783d65e318be4982</sha1>
+        <cve>CVE-2017-17485</cve>
+        <cve>CVE-2017-7525</cve>
+        <cve>CVE-2018-7489</cve>
+        <cve>CVE-2020-10650</cve>
+        <cve>CVE-2021-20190</cve>
+        <cve>CVE-2020-36518</cve>
+        <cve>CVE-2022-42003</cve>
+        <cve>CVE-2022-42004</cve>
+    </suppress>
 
     <!-- groovy-all is only used in tests -->
     <suppress>
@@ -1404,12 +1418,12 @@
         <cve>CVE-2022-42889</cve>
     </suppress>
 
-    <!-- mockserver-core is only used in tests -->
+    <!-- mockserver-* is only used in tests -->
     <suppress>
         <notes><![CDATA[
-   file name: mockserver-core-5.8.1.jar
+   file name: mockserver-*-5.8.1.jar
    ]]></notes>
-        <packageUrl regex="true">^pkg:maven/org\.mock\-server/mockserver\-core@.*$</packageUrl>
+        <packageUrl regex="true">^pkg:maven/org\.mock\-server/mockserver\-.*@.*$</packageUrl>
         <cve>CVE-2021-32827</cve>
     </suppress>
 
@@ -1425,97 +1439,23 @@
     <!-- This CVE was already suppressed for this WF version in e333da3537e3bddd22899bde13fed2f35f37937b -->
     <suppress>
         <notes><![CDATA[
-   file name: wildfly-webservices-server-integration-21.0.2-18-PSI-SNAPSHOT.jar
+   file name: wildfly-*-21.*.jar
    ]]></notes>
-        <packageUrl regex="true">^pkg:maven/org\.wildfly/wildfly\-webservices\-server\-integration@.*$</packageUrl>
+        <packageUrl regex="true">^pkg:maven/org\.wildfly/wildfly\-.*@.*$</packageUrl>
         <cve>CVE-2022-1278</cve>
     </suppress>
-
     <suppress>
         <notes><![CDATA[
-   file name: wildfly-web-21.0.2-18-PSI-SNAPSHOT.jar
+   file name: jipijapa-*-21.*.jar
    ]]></notes>
-        <packageUrl regex="true">^pkg:maven/org\.wildfly/wildfly\-web@.*$</packageUrl>
+        <packageUrl regex="true">^pkg:maven/org\.wildfly/jipijapa\-.*@.*$</packageUrl>
         <cve>CVE-2022-1278</cve>
     </suppress>
-
     <suppress>
         <notes><![CDATA[
-   file name: wildfly-picketlink-21.0.2-18-PSI-SNAPSHOT.jar
-   ]]></notes>
-        <packageUrl regex="true">^pkg:maven/org\.wildfly/wildfly\-picketlink@.*$</packageUrl>
-        <cve>CVE-2022-1278</cve>
-    </suppress>
-
-    <suppress>
-        <notes><![CDATA[
-   file name: wildfly-ormtransformer-21.0.2-18-PSI-SNAPSHOT.jar
-   ]]></notes>
-        <packageUrl regex="true">^pkg:maven/org\.wildfly/wildfly\-ormtransformer@.*$</packageUrl>
-        <cve>CVE-2022-1278</cve>
-    </suppress>
-
-    <suppress>
-        <notes><![CDATA[
-   file name: wildfly-mod_cluster-extension-21.0.2-18-PSI-SNAPSHOT.jar
-   ]]></notes>
-        <packageUrl regex="true">^pkg:maven/org\.wildfly/wildfly\-mod_cluster\-extension@.*$</packageUrl>
-        <cve>CVE-2022-1278</cve>
-    </suppress>
-
-    <suppress>
-        <notes><![CDATA[
-   file name: wildfly-microprofile-health-smallrye-21.0.2-18-PSI-SNAPSHOT.jar
-   ]]></notes>
-        <packageUrl regex="true">^pkg:maven/org\.wildfly/wildfly\-microprofile\-health\-smallrye@.*$</packageUrl>
-        <cve>CVE-2022-1278</cve>
-    </suppress>
-
-    <suppress>
-        <notes><![CDATA[
-   file name: wildfly-ee-21.0.2-18-PSI-SNAPSHOT.jar
-   ]]></notes>
-        <packageUrl regex="true">^pkg:maven/org\.wildfly/wildfly\-ee@.*$</packageUrl>
-        <cve>CVE-2022-1278</cve>
-    </suppress>
-
-    <suppress>
-        <notes><![CDATA[
-   file name: wildfly-core-model-test-framework-13.0.3-19-PSI-SNAPSHOT.jar
+   file name: wildfly-core-model-test-framework-13.*.jar
    ]]></notes>
         <packageUrl regex="true">^pkg:maven/org\.wildfly\.core/wildfly\-core\-model\-test\-framework@.*$</packageUrl>
-        <cve>CVE-2022-1278</cve>
-    </suppress>
-
-    <suppress>
-        <notes><![CDATA[
-   file name: wildfly-clustering-web-infinispan-21.0.2-18-PSI-SNAPSHOT.jar
-   ]]></notes>
-        <packageUrl regex="true">^pkg:maven/org\.wildfly/wildfly\-clustering\-web\-infinispan@.*$</packageUrl>
-        <cve>CVE-2022-1278</cve>
-    </suppress>
-
-    <suppress>
-        <notes><![CDATA[
-   file name: wildfly-clustering-service-21.0.2-18-PSI-SNAPSHOT.jar
-   ]]></notes>
-        <packageUrl regex="true">^pkg:maven/org\.wildfly/wildfly\-clustering\-service@.*$</packageUrl>
-        <cve>CVE-2022-1278</cve>
-    </suppress>
-
-    <suppress>
-        <notes><![CDATA[
-   file name: wildfly-clustering-server-21.0.2-18-PSI-SNAPSHOT.jar
-   ]]></notes>
-        <packageUrl regex="true">^pkg:maven/org\.wildfly/wildfly\-clustering\-server@.*$</packageUrl>
-        <cve>CVE-2022-1278</cve>
-    </suppress>
-
-    <suppress>
-        <notes><![CDATA[
-   file name: jipijapa-spi-21.0.2-18-PSI-SNAPSHOT.jar
-   ]]></notes>
-        <packageUrl regex="true">^pkg:maven/org\.wildfly/jipijapa\-spi@.*$</packageUrl>
         <cve>CVE-2022-1278</cve>
     </suppress>
 
@@ -1536,4 +1476,5 @@
         <sha1>379fceae3a0eac868ef51d68a9850316742f6a42</sha1>
         <cve>CVE-2019-10172</cve>
     </suppress>
+
 </suppressions>
