@@ -1477,4 +1477,12 @@
         <cve>CVE-2019-10172</cve>
     </suppress>
 
+    <!-- xmlunit-core is only used in tests -->
+    <suppress>
+        <notes><![CDATA[
+   file name: xmlunit-core-2.6.3.jar
+   ]]></notes>
+        <packageUrl regex="true">^pkg:maven/org\.xmlunit/xmlunit\-core@.*$</packageUrl>
+        <cve>CVE-2024-31573</cve>
+    </suppress>
 </suppressions>
