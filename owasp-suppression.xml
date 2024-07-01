@@ -1235,4 +1235,29 @@
         <packageUrl regex="true">^pkg:maven/io\.grpc/grpc\-protobuf@.*$</packageUrl>
         <cve>CVE-2023-1428</cve>
     </suppress>
+
+    <!-- Already fixed -->
+    <suppress>
+        <notes><![CDATA[
+        file name: wildfly-.*.jar
+        ]]></notes>
+        <packageUrl regex="true">^pkg:maven/org\.wildfly.*$</packageUrl>
+        <cve>CVE-2022-1278</cve>
+    </suppress>
+    <suppress>
+        <notes><![CDATA[
+        file name: jipijapa-spi-26.1.2-13-PSI-SNAPSHOT.jar
+        ]]></notes>
+        <packageUrl regex="true">^pkg:maven/org\.wildfly/jipijapa\-spi@.*$</packageUrl>
+        <cve>CVE-2022-1278</cve>
+    </suppress>
+
+    <!-- undertow 2.3.33 contains fix for CVE-2024-6162 -->
+    <suppress>
+        <notes><![CDATA[
+        file name: undertow-core-2.2.33.Final.jar
+        ]]></notes>
+        <packageUrl regex="true">^pkg:maven/io\.undertow/undertow\-core@.*$</packageUrl>
+        <cve>CVE-2024-6162</cve>
+    </suppress>
 </suppressions>
