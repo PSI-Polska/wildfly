@@ -740,6 +740,15 @@
         <cve>CVE-2024-31573</cve>
     </suppress>
 
+    <!-- nimbus-jose-jwt was forked and fix for CVE-2023-52428 was added to old version -->
+    <suppress>
+        <notes><![CDATA[
+   file name: nimbus-jose-jwt-8.23-1-PSI.jar
+   ]]></notes>
+        <packageUrl regex="true">^pkg:maven/com\.nimbusds/nimbus\-jose\-jwt@.*$</packageUrl>
+        <cve>CVE-2023-52428</cve>
+    </suppress>
+
     <!-- Version 1.19.2-4-PSI already contains this fix -->
     <suppress>
         <notes><![CDATA[
