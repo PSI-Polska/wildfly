@@ -766,4 +766,13 @@
         <packageUrl regex="true">^pkg:maven/io\.undertow/undertow\-core@.*$</packageUrl>
         <cve>CVE-2024-6162</cve>
     </suppress>
+
+    <!-- WildFly Elytron 1.19.2-5-PSI contains fix for CVE-2023-6236 -->
+    <suppress>
+        <notes><![CDATA[
+        file name: wildfly-elytron-1.19.2-5-PSI.jar
+        ]]></notes>
+        <packageUrl regex="true">^pkg:maven/org\.wildfly\.security/wildfly-elytron-http-oidc@.*$</packageUrl>
+        <cve>CVE-2023-6236</cve>
+    </suppress>
 </suppressions>
