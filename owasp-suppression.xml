@@ -1278,4 +1278,13 @@
         <packageUrl regex="true">^pkg:maven/io\.grpc/grpc-protobuf@.*$</packageUrl>
         <cve>CVE-2023-32731</cve>
     </suppress>
+
+    <!-- Version 2.2.34.Final-PSI contains the fix for CVE-2024-5971 -->
+    <suppress>
+        <notes><![CDATA[
+   file name: undertow-core-2.2.34.Final-PSI.jar
+   ]]></notes>
+        <packageUrl regex="true">^pkg:maven/io\.undertow/undertow-core@2\.2\.34\.Final-PSI.*$</packageUrl>
+        <cve>CVE-2024-5971</cve>
+    </suppress>
 </suppressions>
