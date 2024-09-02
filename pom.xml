@@ -540,7 +540,7 @@
         <version.org.opensaml.opensaml>4.2.0</version.org.opensaml.opensaml>
         <version.org.ow2.asm>9.5</version.org.ow2.asm>
         <version.org.reactivestreams>1.0.4</version.org.reactivestreams>
-        <version.org.wildfly.core>23.0.3-3-PSI</version.org.wildfly.core>
+        <version.org.wildfly.core>23.0.3-4-PSI-SNAPSHOT</version.org.wildfly.core>
         <version.org.wildfly.http-client>2.0.6.Final</version.org.wildfly.http-client>
         <preview.version.org.wildfly.mvc.krazo>0.8.2.Final</preview.version.org.wildfly.mvc.krazo>
         <version.org.wildfly.naming-client>2.0.1.Final</version.org.wildfly.naming-client>
@@ -1356,6 +1356,13 @@
             </plugin>
 
         </plugins>
+        <extensions>
+            <extension>
+                <groupId>com.google.cloud.artifactregistry</groupId>
+                <artifactId>artifactregistry-maven-wagon</artifactId>
+                <version>2.2.2</version>
+            </extension>
+        </extensions>
     </build>
 
     <!-- Profiles -->
@@ -1739,6 +1746,31 @@
                     </plugin>
                 </plugins>
             </build>
+        </profile>
+        <profile>
+            <id>use-gcp-artifact-registry</id>
+            <distributionManagement>
+                <snapshotRepository>
+                    <id>artifact-registry</id>
+                    <url>artifactregistry://europe-west3-maven.pkg.dev/pocagrochocinski/maven-repo</url>
+                </snapshotRepository>
+                <repository>
+                    <id>artifact-registry</id>
+                    <url>artifactregistry://europe-west3-maven.pkg.dev/pocagrochocinski/maven-repo</url>
+                </repository>
+            </distributionManagement>
+            <repositories>
+                <repository>
+                    <id>artifact-registry</id>
+                    <url>artifactregistry://europe-west3-maven.pkg.dev/pocagrochocinski/maven-repo</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </repository>
+            </repositories>
         </profile>
     </profiles>
 </project>
