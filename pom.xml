@@ -867,8 +867,24 @@
             <url>${maven.repository.url}</url>
             <layout>default</layout>
         </repository>
+        <repository>
+            <id>central</id>
+            <url>https://repo1.maven.org/maven2</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+        <repository>
+            <id>artifact-registry</id>
+            <url>artifactregistry://europe-west3-maven.pkg.dev/pocagrochocinski/maven-repo</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
     </repositories>
-
     <pluginRepositories>
         <pluginRepository>
             <releases>
@@ -880,6 +896,13 @@
             <id>jboss-public-repository-group</id>
             <name>JBoss Public Repository Group</name>
             <url>${maven.repository.url}</url>
+        </pluginRepository>
+        <pluginRepository>
+            <id>central</id>
+            <url>https://repo1.maven.org/maven2</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
         </pluginRepository>
     </pluginRepositories>
 
@@ -1746,31 +1769,6 @@
                     </plugin>
                 </plugins>
             </build>
-        </profile>
-        <profile>
-            <id>use-gcp-artifact-registry</id>
-            <distributionManagement>
-                <snapshotRepository>
-                    <id>artifact-registry</id>
-                    <url>artifactregistry://europe-west3-maven.pkg.dev/pocagrochocinski/maven-repo</url>
-                </snapshotRepository>
-                <repository>
-                    <id>artifact-registry</id>
-                    <url>artifactregistry://europe-west3-maven.pkg.dev/pocagrochocinski/maven-repo</url>
-                </repository>
-            </distributionManagement>
-            <repositories>
-                <repository>
-                    <id>artifact-registry</id>
-                    <url>artifactregistry://europe-west3-maven.pkg.dev/pocagrochocinski/maven-repo</url>
-                    <releases>
-                        <enabled>true</enabled>
-                    </releases>
-                    <snapshots>
-                        <enabled>true</enabled>
-                    </snapshots>
-                </repository>
-            </repositories>
         </profile>
     </profiles>
 </project>

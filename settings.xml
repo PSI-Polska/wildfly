@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ****************************************************************** -->
+<!--  -->
+<!-- Copyright 2024 PSI Software AG. All rights reserved. -->
+<!-- PSI PROPRIETARY/CONFIDENTIAL. Use is subject to license terms -->
+<!--  -->
+<!-- ****************************************************************** -->
+
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 https://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+    <activeProfiles>
+        <activeProfile>artifact-registry</activeProfile>
+    </activeProfiles>
+
+    <profiles>
+        <profile>
+            <id>artifact-registry</id>
+            <repositories>
+                <repository>
+                    <id>artifact-registry</id>
+                    <url>artifactregistry://europe-west3-maven.pkg.dev/pocagrochocinski/maven-repo</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </repository>
+            </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>artifact-registry</id>
+                    <url>artifactregistry://europe-west3-maven.pkg.dev/pocagrochocinski/maven-repo</url>
+                    <releases>
+                        <enabled>true</enabled>
+                        <updatePolicy>never</updatePolicy>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                        <updatePolicy>always</updatePolicy>
+                    </snapshots>
+                </pluginRepository>
+            </pluginRepositories>
+        </profile>
+    </profiles>
+</settings>
