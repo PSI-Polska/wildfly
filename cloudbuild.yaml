@@ -1,6 +1,8 @@
 steps:
   - name: 'maven:3.9-amazoncorretto-11'
     args:
+      - '-s'
+      - './settings.xml'
       - clean
       - deploy
       - '-DskipTests'
