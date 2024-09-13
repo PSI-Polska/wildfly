@@ -1772,5 +1772,30 @@
                 </repository>
             </repositories>
         </profile>
+        <profile>
+            <id>use-gcp-artifact-registry</id>
+            <distributionManagement>
+                <snapshotRepository>
+                    <id>artifact-registry</id>
+                    <url>artifactregistry://europe-west3-maven.pkg.dev/pocagrochocinski/maven-repo</url>
+                </snapshotRepository>
+                <repository>
+                    <id>artifact-registry</id>
+                    <url>artifactregistry://europe-west3-maven.pkg.dev/pocagrochocinski/maven-repo</url>
+                </repository>
+            </distributionManagement>
+            <repositories>
+                <repository>
+                    <id>artifact-registry</id>
+                    <url>artifactregistry://europe-west3-maven.pkg.dev/pocagrochocinski/maven-repo</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </repository>
+            </repositories>
+        </profile>
     </profiles>
 </project>
