@@ -877,6 +877,17 @@
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
+            <id>artifact-registry</id>
+            <name>artifact-registry</name>
+            <url>artifactregistry://europe-west3-maven.pkg.dev/pocagrochocinski/maven-repo</url>
+        </pluginRepository>
+        <pluginRepository>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
             <id>jboss-public-repository-group</id>
             <name>JBoss Public Repository Group</name>
             <url>${maven.repository.url}</url>
