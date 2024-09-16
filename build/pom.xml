@@ -97,18 +97,6 @@
                                 <jboss-maven-dist/>
                                 <jboss-fork-embedded>${galleon.fork.embedded}</jboss-fork-embedded>
                             </plugin-options>
-                            <repositories>
-                                <repository>
-                                    <id>AR</id>
-                                    <url>artifactregistry://europe-west3-maven.pkg.dev/pocagrochocinski/maven-repo</url>
-                                    <releases>
-                                        <enabled>true</enabled>
-                                    </releases>
-                                    <snapshots>
-                                        <enabled>true</enabled>
-                                    </snapshots>
-                                </repository>
-                              </repositories>
                         </configuration>
                     </execution>
                 </executions>
