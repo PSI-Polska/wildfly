@@ -248,7 +248,7 @@
                                 </goals>
                                 <phase>package</phase>
                                 <configuration>
-                                    <offline>true</offline>
+                                    <offline>${galleon.offline}</offline>
                                     <fpGroupId>${full.maven.groupId}</fpGroupId>
                                     <fpArtifactId>wildfly-galleon-pack</fpArtifactId>
                                     <fpVersion>${full.maven.version}</fpVersion>
@@ -350,7 +350,7 @@
                         <version>2.0.2.Final</version>
                         <configuration>
                             <jboss-home>${basedir}/target/${project.build.finalName}</jboss-home>
-                            <offline>true</offline>
+                            <offline>${galleon.offline}</offline>
                         </configuration>
                         <executions>
                             <!-- hardening.cli -->
