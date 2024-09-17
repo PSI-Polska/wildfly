@@ -13,6 +13,8 @@
         <activeProfile>artifact-registry</activeProfile>
     </activeProfiles>
 
+	<localRepository>~/.m2</localRepository>
+
     <profiles>
         <profile>
             <id>artifact-registry</id>
