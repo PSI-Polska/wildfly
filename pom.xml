@@ -138,7 +138,8 @@
         <!-- Galleon -->
         <galleon.fork.embedded>true</galleon.fork.embedded>
         <galleon.log.time>true</galleon.log.time>
-        <galleon.offline>false</galleon.offline>
+        <galleon.offline>true</galleon.offline>
+        <galleon.offline.build>false</galleon.offline.build>
 
         <!-- Checkstyle configuration -->
         <linkXRef>false</linkXRef>
