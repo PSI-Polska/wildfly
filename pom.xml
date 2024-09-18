@@ -1763,8 +1763,9 @@
             <id>use-gcp-artifact-registry</id>
             <distributionManagement>
                 <snapshotRepository>
-                    <id>artifact-registry</id>
-                    <url>artifactregistry://europe-west3-maven.pkg.dev/pocagrochocinski/maven-repo</url>
+                    <id>artifact-registry-snapshot</id>
+                    <url>artifactregistry://europe-west3-maven.pkg.dev/pocagrochocinski/maven-snapshot</url>
+                    <uniqueVersion>false</uniqueVersion>
                 </snapshotRepository>
                 <repository>
                     <id>artifact-registry</id>
@@ -1772,6 +1773,16 @@
                 </repository>
             </distributionManagement>
             <repositories>
+                <repository>
+                    <id>artifact-registry-snapshot</id>
+                    <url>artifactregistry://europe-west3-maven.pkg.dev/pocagrochocinski/maven-snapshot</url>
+                    <releases>
+                        <enabled>false</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </repository>
                 <repository>
                     <id>artifact-registry</id>
                     <url>artifactregistry://europe-west3-maven.pkg.dev/pocagrochocinski/maven-repo</url>
@@ -1785,6 +1796,18 @@
             </repositories>
             <pluginRepositories>
                 <pluginRepository>
+                    <id>artifact-registry-snapshot</id>
+                    <url>artifactregistry://europe-west3-maven.pkg.dev/pocagrochocinski/maven-snapshot</url>
+                    <releases>
+                        <enabled>false</enabled>
+                        <updatePolicy>never</updatePolicy>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                        <updatePolicy>always</updatePolicy>
+                    </snapshots>
+                </pluginRepository>
+                <pluginRepository>
                     <id>artifact-registry</id>
                     <url>artifactregistry://europe-west3-maven.pkg.dev/pocagrochocinski/maven-repo</url>
                     <releases>
@@ -1792,7 +1815,7 @@
                         <updatePolicy>never</updatePolicy>
                     </releases>
                     <snapshots>
-                        <enabled>true</enabled>
+                        <enabled>false</enabled>
                         <updatePolicy>always</updatePolicy>
                     </snapshots>
                 </pluginRepository>

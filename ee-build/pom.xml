@@ -76,7 +76,7 @@
                             <install-dir>${project.build.directory}/${project.build.finalName}</install-dir>
                             <record-state>true</record-state>
                             <log-time>${galleon.log.time}</log-time>
-                            <offline>${galleon.offline}</offline>
+                            <offline>${galleon.offline.build}</offline>
                             <feature-packs>
                                 <feature-pack>
                                     <groupId>${project.groupId}</groupId>

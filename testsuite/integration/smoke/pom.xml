@@ -507,7 +507,7 @@
                             <provisioning-dir>${project.build.directory}/wildfly</provisioning-dir>
                             <record-provisioning-state>false</record-provisioning-state>
                             <log-provisioning-time>${galleon.log.time}</log-provisioning-time>
-                            <offline-provisioning>${galleon.offline}</offline-provisioning>
+                            <offline-provisioning>${galleon.offline.build}</offline-provisioning>
                             <galleon-options>
                                 <jboss-maven-dist/>
                                 <jboss-fork-embedded>${galleon.fork.embedded}</jboss-fork-embedded>
