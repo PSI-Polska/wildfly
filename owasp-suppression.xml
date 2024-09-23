@@ -380,4 +380,13 @@
         <packageUrl regex="true">^pkg:maven/org\.keycloak/keycloak-saml-wildfly-elytron-adapter@.*$</packageUrl>
         <vulnerabilityName>CVE-2024-7341</vulnerabilityName>
     </suppress>
+
+    <!--  This cve is regarding grpc-server not kafka-client  -->
+    <suppress>
+        <notes><![CDATA[
+   file name: vertx-kafka-client-4.4.6.jar
+   ]]></notes>
+        <packageUrl regex="true">^pkg:maven/io\.vertx/vertx-kafka-client@.*$</packageUrl>
+        <cve>CVE-2024-8391</cve>
+    </suppress>
 </suppressions>
