@@ -389,4 +389,40 @@
         <packageUrl regex="true">^pkg:maven/io\.vertx/vertx-kafka-client@.*$</packageUrl>
         <cve>CVE-2024-8391</cve>
     </suppress>
+    
+    <!-- ___Start of Wildfly-dist suppresions___ -->
+    <suppress>
+        <notes><![CDATA[
+   file name: jboss-client.jar
+   ]]></notes>
+        <sha1>2bed0a9c8556a0be23da4df599e65e3bcaf2b7c7</sha1>
+        <cve>CVE-2020-10740</cve>
+        <cve>CVE-2020-10718</cve>
+        <cve>CVE-2022-1278</cve>
+    </suppress>
+    
+    <suppress>
+        <notes><![CDATA[
+   file name: wildfly-elytron-tool.jar
+   ]]></notes>
+        <sha1>0e5f3ef06d17f962fd0d6cf7ab962a931ebe05fa</sha1>
+        <cve>CVE-2022-1278</cve>
+    </suppress>
+    
+    <suppress>
+        <notes><![CDATA[
+   file name: jboss-cli-client.jar
+   ]]></notes>
+        <sha1>c07476c7dfb059ff6ffbb7401372eda015b605d1</sha1>
+        <cve>CVE-2022-1278</cve>
+    </suppress>
+    
+    <suppress>
+        <notes><![CDATA[
+   file name: launcher.jar
+   ]]></notes>
+        <sha1>cb0e242ab2c9b8b06f375257311987cf2d4802f0</sha1>
+        <cve>CVE-2022-1278</cve>
+    </suppress>
+    <!-- ___End of Wildfly-dist suppresions___ -->
 </suppressions>
