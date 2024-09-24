@@ -1170,29 +1170,7 @@
         <packageUrl regex="true">^pkg:maven/org\.infinispan/infinispan\-client\-hotrod@.*$</packageUrl>
         <vulnerabilityName>CVE-2023-4586</vulnerabilityName>
     </suppress>
-    <!-- Dependency used only in test modules -->
-    <suppress>
-        <notes><![CDATA[
-        file name: json-path-2.4.0.jar
-        ]]></notes>
-        <packageUrl regex="true">^pkg:maven/com\.jayway\.jsonpath/json\-path@.*$</packageUrl>
-        <vulnerabilityName>CVE-2023-51074</vulnerabilityName>
-    </suppress>
-    <!-- Those CVE's are false positives, but issue was resolved here: https://github.com/undertow-io/undertow/pull/1559 -->
-    <suppress>
-        <notes><![CDATA[
-        file name: undertow-core-2.2.31.Final.jar
-        ]]></notes>
-        <packageUrl regex="true">^pkg:maven/io\.undertow/undertow\-core@.*$</packageUrl>
-        <vulnerabilityName>CVE-2024-1635</vulnerabilityName>
-    </suppress>
-    <suppress>
-        <notes><![CDATA[
-        file name: undertow-core-2.2.31.Final.jar
-        ]]></notes>
-        <packageUrl regex="true">^pkg:maven/io\.undertow/undertow\-core@.*$</packageUrl>
-        <vulnerabilityName>CVE-2024-1459</vulnerabilityName>
-    </suppress>
+
     <!-- Library used only in test classes. It's not provided in our WildFly distribution -->
     <suppress>
         <notes><![CDATA[
