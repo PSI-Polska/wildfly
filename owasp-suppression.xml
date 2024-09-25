@@ -1293,7 +1293,7 @@
         <notes><![CDATA[
    file name: jboss-client.jar
    ]]></notes>
-        <sha1>2bed0a9c8556a0be23da4df599e65e3bcaf2b7c7</sha1>
+        <filePath regex="true">.*\bjboss-client\.jar</filePath>
         <cve>CVE-2020-10740</cve>
         <cve>CVE-2020-10718</cve>
         <cve>CVE-2022-1278</cve>
@@ -1303,7 +1303,7 @@
         <notes><![CDATA[
    file name: jboss-cli-client.jar
    ]]></notes>
-        <sha1>c07476c7dfb059ff6ffbb7401372eda015b605d1</sha1>
+        <filePath regex="true">.*\bjboss-cli-client\.jar</filePath>
         <cve>CVE-2022-1278</cve>
         <cve>CVE-2020-10740</cve>
     </suppress>
@@ -1312,7 +1312,7 @@
         <notes><![CDATA[
    file name: launcher.jar
    ]]></notes>
-        <sha1>cb0e242ab2c9b8b06f375257311987cf2d4802f0</sha1>
+        <filePath regex="true">.*\blauncher\.jar</filePath>
         <cve>CVE-2022-1278</cve>
         <cve>CVE-2020-10740</cve>
     </suppress>
