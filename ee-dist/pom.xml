@@ -120,7 +120,7 @@
                             <install-dir>${basedir}/target/${project.build.finalName}</install-dir>
                             <record-state>true</record-state>
                             <log-time>${galleon.log.time}</log-time>
-                            <offline>${galleon.offline}</offline>
+                            <offline>${galleon.offline.build}</offline>
                             <plugin-options>
                                 <jboss-fork-embedded>${galleon.fork.embedded}</jboss-fork-embedded>
                             </plugin-options>
@@ -223,7 +223,7 @@
                                 </goals>
                                 <phase>package</phase>
                                 <configuration>
-                                    <offline>true</offline>
+                                    <offline>${galleon.offline.build}</offline>
                                     <fpGroupId>${project.groupId}</fpGroupId>
                                     <fpArtifactId>wildfly-ee-galleon-pack</fpArtifactId>
                                     <fpVersion>${project.version}</fpVersion>
