@@ -380,6 +380,27 @@
         <packageUrl regex="true">^pkg:maven/org\.keycloak/keycloak-saml-wildfly-elytron-adapter@.*$</packageUrl>
         <vulnerabilityName>CVE-2024-7341</vulnerabilityName>
     </suppress>
+    <suppress>
+        <notes><![CDATA[
+        file name: keycloak-saml-wildfly-adapter-18.0.2.jar
+        ]]></notes>
+        <packageUrl regex="true">^pkg:maven/org\.keycloak/keycloak-saml-wildfly-adapter@.*$</packageUrl>
+        <cve>CVE-2024-7341</cve>
+    </suppress>
+    <suppress>
+        <notes><![CDATA[
+        file name: keycloak-saml-adapter-core-18.0.2.jar
+        ]]></notes>
+        <packageUrl regex="true">^pkg:maven/org\.keycloak/keycloak-saml-adapter-core@.*$</packageUrl>
+        <cve>CVE-2024-7341</cve>
+    </suppress>
+    <suppress>
+        <notes><![CDATA[
+        file name: keycloak-jboss-adapter-core-18.0.2.jar
+        ]]></notes>
+        <packageUrl regex="true">^pkg:maven/org\.keycloak/keycloak-jboss-adapter-core@.*$</packageUrl>
+        <cve>CVE-2024-7341</cve>
+    </suppress>
 
     <!--  This cve is regarding grpc-server not kafka-client  -->
     <suppress>
