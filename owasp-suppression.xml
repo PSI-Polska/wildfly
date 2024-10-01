@@ -52,15 +52,9 @@
         <notes><![CDATA[
    file name: transformer-6.5.4.Final.jar (shaded: org.wildfly.extras.batavia:transformer-api:1.0.12.Final)
    ]]></notes>
-        <packageUrl regex="true">^pkg:maven/org\.wildfly\.extras\.batavia/transformer-api@6.5.4.Final$</packageUrl>
-        <cve>CVE-2018-14627</cve>
-        <cve>CVE-2019-3805</cve>
+        <packageUrl regex="true">^pkg:maven/org\.wildfly\.extras\.batavia/transformer-api@1\.0\.12\.Final$</packageUrl>
         <cve>CVE-2020-10718</cve>
         <cve>CVE-2020-10740</cve>
-        <cve>CVE-2020-1719</cve>
-        <cve>CVE-2020-25640</cve>
-        <cve>CVE-2020-25689</cve>
-        <cve>CVE-2021-3536</cve>
         <cve>CVE-2022-1278</cve>
     </suppress>
 
@@ -243,6 +237,15 @@
         <cve>CVE-2007-1652</cve>
     </suppress>
 
+    <!-- False positive: We build WF in lowest possible JDK (17) which isn't affected -->
+    <suppress>
+        <notes><![CDATA[
+        file name: expressly-5.0.0.jar
+        ]]></notes>
+        <packageUrl regex="true">^pkg:maven/org\.glassfish\.expressly/expressly@.*$</packageUrl>
+        <cve>CVE-2023-5763</cve>
+    </suppress>
+
     <!--  undertow 2.3.17.Final contains fix for CVE-2024-5971  -->
     <suppress>
         <notes><![CDATA[
@@ -275,7 +278,7 @@
         <packageUrl regex="true">^pkg:maven/io\.vertx/vertx-kafka-client@.*$</packageUrl>
         <cve>CVE-2024-8391</cve>
     </suppress>
-    
+
     <!-- ___Start of Wildfly-dist suppresions___ -->
     <suppress>
         <notes><![CDATA[
@@ -286,7 +289,7 @@
         <cve>CVE-2020-10718</cve>
         <cve>CVE-2022-1278</cve>
     </suppress>
-    
+
     <suppress>
         <notes><![CDATA[
    file name: wildfly-elytron-tool.jar
@@ -294,7 +297,7 @@
         <filePath regex="true">.*\bwildfly-elytron-tool\.jar</filePath>
         <cve>CVE-2022-1278</cve>
     </suppress>
-    
+
     <suppress>
         <notes><![CDATA[
    file name: jboss-cli-client.jar
@@ -302,7 +305,7 @@
         <filePath regex="true">.*\bjboss-cli-client\.jar</filePath>
         <cve>CVE-2022-1278</cve>
     </suppress>
-    
+
     <suppress>
         <notes><![CDATA[
    file name: launcher.jar
