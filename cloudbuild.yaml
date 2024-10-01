@@ -1,11 +1,17 @@
 steps:
-  - name: 'maven:3.9-amazoncorretto-11'
+  - name: 'europe-west3-docker.pkg.dev/pocagrochocinski/docker-repo/openjdk-user:latest'
     args:
-      - clean
-      - deploy
-      - '-DskipTests'
-      - '-Drelease=true'
-      - '-Puse-gcp-artifact-registry'
-    entrypoint: mvn
+      - '-c'
+      - |
+        echo "copy project"
+        cp -r . /home/jenkins/wildfly/
+        cd /home/jenkins/wildfly/
+        echo "current directory: $(pwd)"
+        echo "build and test"
+        mvn clean install -B -Puse-gcp-artifact-registry -DallTests -Drelease=true -ntp
+        mvn deploy -B -Puse-gcp-artifact-registry -DskipTests -Drelease=true -ntp
+    entrypoint: bash
+timeout: 21600s
 options:
   logging: CLOUD_LOGGING_ONLY
+  machineType: E2_HIGHCPU_8

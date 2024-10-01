@@ -1,0 +1,30 @@
+{
+  "name": "from openjdk",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  // "mounts": [
+  //   "source=c:/Users/wszwed/.m2,target=/home/jenkins/.m2,type=bind"
+  // ],
+  // "postCreateCommand": "sudo chown -R $(id -u):$(id -g) /home/jenkins/.m2",
+  "customizations": {
+    // Configure properties specific to VS Code.
+    "vscode": {
+      // Add the IDs of extensions you want installed when the container is created.
+      "extensions": [
+        // "vscjava.vscode-java-pack"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "terminal.integrated.profiles.linux": { "bash": { "path": "/bin/bash" } }
+      }
+    },
+  },
+  "features": {
+		// "ghcr.io/devcontainers/features/git:1": {},
+    // "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {},
+    // "ghcr.io/devcontainers/features/docker-in-docker": {}
+	},
+  // "remoteUser": "jenkins"
+  
+}
