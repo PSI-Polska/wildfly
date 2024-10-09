@@ -279,7 +279,16 @@
         <cve>CVE-2024-8391</cve>
     </suppress>
 
-    <!-- ___Start of Wildfly-dist suppresions___ -->
+    <!-- Affected package lucene.replicator does not occur in WildFly 31 -->
+    <suppress>
+        <notes><![CDATA[
+        file name: lucene-*-9.8.0.jar
+        ]]></notes>
+        <packageUrl regex="true">^pkg:maven/org\.apache\.lucene/lucene-(?!replicator).*@9\.8\.0$</packageUrl>
+        <cve>CVE-2024-45772</cve>
+    </suppress>
+
+    <!-- ___Start of Wildfly-dist suppressions___ -->
     <suppress>
         <notes><![CDATA[
    file name: jboss-client.jar
@@ -313,5 +322,5 @@
         <filePath regex="true">.*\blauncher\.jar</filePath>
         <cve>CVE-2022-1278</cve>
     </suppress>
-    <!-- ___End of Wildfly-dist suppresions___ -->
+    <!-- ___End of Wildfly-dist suppressions___ -->
 </suppressions>
