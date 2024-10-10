@@ -331,7 +331,25 @@
         <cve>CVE-2024-7885</cve>
     </suppress>
 
-    <!-- ___Start of Wildfly-dist suppresions___ -->
+    <!-- Infinispan used as embedded in WildFly. Vulnerability is on server side when using infinispan as client/server -->
+    <suppress>
+        <notes><![CDATA[
+        file name: infinispan-*-13.0.10.Final.jar
+        ]]></notes>
+        <packageUrl regex="true">^pkg:maven/org\.infinispan/infinispan-.*@13\.0\.10\.Final$</packageUrl>
+        <cve>CVE-2023-5384</cve>
+    </suppress>
+    
+    <!-- Affected package lucene.replicator does not occur in WildFly 26 -->
+    <suppress>
+        <notes><![CDATA[
+        file name: lucene-*-5.5.5.jar
+        ]]></notes>
+        <packageUrl regex="true">^pkg:maven/org\.apache\.lucene/lucene-(?!replicator).*@5\.5\.5$</packageUrl>
+        <cve>CVE-2024-45772</cve>
+    </suppress>
+
+    <!-- ___Start of Wildfly-dist suppressions___ -->
     <suppress>
         <notes><![CDATA[
    file name: jboss-client.jar
@@ -359,5 +377,5 @@
         <cve>CVE-2022-1278</cve>
         <cve>CVE-2020-10740</cve>
     </suppress>
-    <!-- ___End of Wildfly-dist suppresions___ -->
+    <!-- ___End of Wildfly-dist suppressions___ -->
 </suppressions>
