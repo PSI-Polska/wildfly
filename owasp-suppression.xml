@@ -377,5 +377,15 @@
         <cve>CVE-2022-1278</cve>
         <cve>CVE-2020-10740</cve>
     </suppress>
+
+    <!-- commons-io fixed by updating to version 2.17.0, suppression for violation in shaded dependencies used in tests -->
+    <suppress>
+        <notes><![CDATA[
+   file name: velocity-engine-core-2.3.jar (shaded: commons-io:commons-io:2.8.0)
+   ]]></notes>
+        <packageUrl regex="true">^pkg:maven/commons-io/commons-io@2\.8\.0$</packageUrl>
+        <cve>CVE-2024-47554</cve>
+    </suppress>
+
     <!-- ___End of Wildfly-dist suppressions___ -->
 </suppressions>
