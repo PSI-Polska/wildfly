@@ -386,6 +386,13 @@
         <packageUrl regex="true">^pkg:maven/commons-io/commons-io@2\.8\.0$</packageUrl>
         <cve>CVE-2024-47554</cve>
     </suppress>
-
+    <!-- Wildfly does not use vulnerable hornet.core.client.impl.ClientConsumerImpl.java -->
+    <suppress>
+        <notes><![CDATA[
+   file name: hornetq-core-client-2.4.8.Final.jar
+   ]]></notes>
+        <packageUrl regex="true">^pkg:maven/org\.hornetq/hornetq-.*@2\.4\.8\.Final$</packageUrl>
+        <cve>CVE-2024-51127</cve>
+    </suppress>
     <!-- ___End of Wildfly-dist suppressions___ -->
 </suppressions>
