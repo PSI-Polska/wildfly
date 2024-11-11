@@ -8,6 +8,7 @@ package org.wildfly.test.integration.microprofile.reactive.messaging.kafka.compr
 import jakarta.inject.Inject;
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
+import org.jboss.arquillian.testcontainers.api.DockerRequired;
 import org.jboss.as.arquillian.api.ServerSetup;
 import org.jboss.as.test.shared.CLIServerSetupTask;
 import org.jboss.as.test.shared.PermissionUtils;
@@ -34,6 +35,7 @@ import java.util.concurrent.TimeUnit;
  */
 @RunWith(Arquillian.class)
 @ServerSetup({RunKafkaSetupTask.class, EnableReactiveExtensionsSetupTask.class})
+@DockerRequired
 public class ReactiveMessagingKafkaCompressionTestCase {
 
     private static final long TIMEOUT = TimeoutUtil.adjust(15000);
