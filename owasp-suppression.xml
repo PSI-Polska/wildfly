@@ -247,6 +247,8 @@
     </suppress>
 
     <!--  undertow 2.3.17.Final contains fix for CVE-2024-5971  -->
+    <!-- CVE-2024-4109 Rejected reason: Red Hat Product Security has determined that this CVE -->
+    <!-- is not a security vulnerability.-->
     <suppress>
         <notes><![CDATA[
         file name: undertow-core-2.3.17.Final.jar
@@ -254,6 +256,7 @@
         <packageUrl regex="true">^pkg:maven/io\.undertow/undertow-core@2\.3\.17\.Final$</packageUrl>
         <vulnerabilityName>CVE-2024-5971</vulnerabilityName>
         <cve>CVE-2024-7885</cve>
+        <cve>CVE-2024-4109</cve>
     </suppress>
 
     <!--    Keycloak is used only in integration tests          -->
