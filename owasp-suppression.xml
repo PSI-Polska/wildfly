@@ -321,6 +321,8 @@
     </suppress>
 
     <!-- Version 2.2.36.Final contains the fix for CVE-2024-5971 -->
+    <!-- CVE-2024-4109 Rejected reason: Red Hat Product Security has determined that this CVE -->
+    <!-- is not a security vulnerability.-->
     <suppress>
         <notes><![CDATA[
    file name: undertow-core-2.2.36.Final.jar
@@ -329,6 +331,7 @@
         <cve>CVE-2024-6162</cve>
         <cve>CVE-2024-5971</cve>
         <cve>CVE-2024-7885</cve>
+        <cve>CVE-2024-4109</cve>
     </suppress>
 
     <!-- Infinispan used as embedded in WildFly. Vulnerability is on server side when using infinispan as client/server -->
