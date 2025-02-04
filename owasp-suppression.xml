@@ -350,5 +350,13 @@
         <packageUrl regex="true">^pkg:maven/org\.elasticsearch\.client/elasticsearch-rest-client@8\.11\.1$</packageUrl>
         <cve>CVE-2024-43709</cve>
     </suppress>
+    <!-- CVE in elasticsearch.jar not in elasticsearch-rest-client-sniffer -->
+    <suppress>
+        <notes><![CDATA[
+   file name: elasticsearch-rest-client-sniffer-8.11.1.jar
+   ]]></notes>
+        <packageUrl regex="true">^pkg:maven/org\.elasticsearch\.client/elasticsearch-rest-client-sniffer@8\.11\.1$</packageUrl>
+        <cve>CVE-2024-43709</cve>
+    </suppress>
     <!-- ___End of Wildfly-dist suppressions___ -->
 </suppressions>
