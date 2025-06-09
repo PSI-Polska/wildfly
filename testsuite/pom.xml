@@ -189,7 +189,7 @@
 
         <!-- properties to enable plugin executions -->
         <ts.bootable-jar-packaging.phase>none</ts.bootable-jar-packaging.phase>
-
+        <ds.host>localhost</ds.host>
     </properties>
 
     <dependencyManagement>
@@ -814,7 +814,7 @@
                 <ds.db>mysql</ds.db>
                 <ds.jdbc.driver>com.mysql.jdbc.Driver</ds.jdbc.driver>
                 <ds.jdbc.driver-xa>com.mysql.jdbc.jdbc2.optional.MysqlXADataSource</ds.jdbc.driver-xa>
-                <ds.jdbc.url>jdbc:mysql://localhost:3306/test</ds.jdbc.url>
+                <ds.jdbc.url>jdbc:mysql://${ds.host}:3306/test</ds.jdbc.url>
                 <ds.jdbc.driver.version>5.1.17</ds.jdbc.driver.version>
                 <ds.module.path>com/mysql</ds.module.path>
             </properties>
@@ -828,7 +828,7 @@
                 <ds.db>db2</ds.db>
                 <ds.jdbc.driver>com.ibm.db2.jcc.DB2Driver</ds.jdbc.driver>
                 <ds.jdbc.driver-xa>com.ibm.db2.jcc.DB2Driver</ds.jdbc.driver-xa>
-                <ds.jdbc.url>jdbc:db2://localhost:60000/test</ds.jdbc.url>
+                <ds.jdbc.url>jdbc:db2://${ds.host}:60000/test</ds.jdbc.url>
                 <ds.jdbc.driver.version>4.11.77</ds.jdbc.driver.version>
             </properties>
         </profile>
@@ -841,7 +841,7 @@
                 <ds.db>mssql</ds.db>
                 <ds.jdbc.driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</ds.jdbc.driver>
                 <ds.jdbc.driver-xa>com.microsoft.sqlserver.jdbc.SQLServerDriver</ds.jdbc.driver-xa>
-                <ds.jdbc.url>jdbc:sqlserver://localhost:1433;DatabaseName=test</ds.jdbc.url>
+                <ds.jdbc.url>jdbc:sqlserver://${ds.host}:1433;DatabaseName=test</ds.jdbc.url>
                 <ds.jdbc.driver.version>3.0.1301.101</ds.jdbc.driver.version>
             </properties>
         </profile>
@@ -854,7 +854,7 @@
                 <ds.db>oracle</ds.db>
                 <ds.jdbc.driver>oracle.jdbc.driver.OracleDriver</ds.jdbc.driver>
                 <ds.jdbc.driver-xa>oracle.jdbc.driver.OracleDriver</ds.jdbc.driver-xa>
-                <ds.jdbc.url>jdbc:oracle:thin:@localhost:1521:test</ds.jdbc.url>
+                <ds.jdbc.url>jdbc:oracle:thin:@${ds.host}:1521:test</ds.jdbc.url>
                 <ds.jdbc.driver.version>11.2.0.2.0</ds.jdbc.driver.version>
             </properties>
         </profile>
@@ -867,7 +867,7 @@
                 <ds.db>oracle</ds.db>
                 <ds.jdbc.driver>org.postgresql.Driver</ds.jdbc.driver>
                 <ds.jdbc.driver-xa>org.postgresql.Driver</ds.jdbc.driver-xa>
-                <ds.jdbc.url>jdbc:postgresql://localhost:5432/test</ds.jdbc.url>
+                <ds.jdbc.url>jdbc:postgresql://${ds.host}:5432/test</ds.jdbc.url>
                 <ds.jdbc.driver.version>8.4.702</ds.jdbc.driver.version>
             </properties>
         </profile>
@@ -880,7 +880,7 @@
                 <ds.db>sybase</ds.db>
                 <ds.jdbc.driver>com.sybase.jdbc4.jdbc.SybDriver</ds.jdbc.driver>
                 <ds.jdbc.driver-xa>com.sybase.jdbc4.jdbc.SybDriver</ds.jdbc.driver-xa>
-                <ds.jdbc.url>jdbc:sybase:Tds:localhost:5000/test</ds.jdbc.url>
+                <ds.jdbc.url>jdbc:sybase:Tds:${ds.host}:5000/test</ds.jdbc.url>
                 <ds.jdbc.driver.version>26502</ds.jdbc.driver.version>
             </properties>
         </profile>

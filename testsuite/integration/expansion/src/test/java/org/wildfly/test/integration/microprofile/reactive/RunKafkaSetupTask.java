@@ -30,7 +30,7 @@ public class RunKafkaSetupTask implements ServerSetupTask {
             throw new IllegalArgumentException("Specify Kafka version with -Dwildfly.test.kafka.version");
         }
         container = new KafkaContainer("apache/kafka-native:" + kafkaVersion);
-        container.setPortBindings(Arrays.asList("9092:9092", "9093:9093"));
+        container.setExposedPorts(Arrays.asList(9092, 9093));
 
         for (Map.Entry<String, String> entry : extraBrokerProperties().entrySet()) {
             container.addEnv(entry.getKey(), entry.getValue());

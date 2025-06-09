@@ -170,9 +170,9 @@
                 <jdk>[17,)</jdk>
             </activation>
             <modules>
-                <module>basic</module>
+<!--                <module>basic</module>-->
                 <module>expansion</module>
-                <module>manualmode</module>
+<!--                <module>manualmode</module>-->
             </modules>
         </profile>
         <!-- Define ts.integration uber-group. -->
