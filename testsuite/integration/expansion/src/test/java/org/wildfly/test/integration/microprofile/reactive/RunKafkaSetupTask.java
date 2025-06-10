@@ -30,7 +30,7 @@ public class RunKafkaSetupTask implements ServerSetupTask {
             throw new IllegalArgumentException("Specify Kafka version with -Dwildfly.test.kafka.version");
         }
         container = new KafkaContainer("apache/kafka-native:" + kafkaVersion);
-        container.setExposedPorts(Arrays.asList(9092, 9093));
+        container.setPortBindings(Arrays.asList("9092:9092", "9093:9093"));
 
         for (Map.Entry<String, String> entry : extraBrokerProperties().entrySet()) {
             container.addEnv(entry.getKey(), entry.getValue());
@@ -38,7 +38,7 @@ public class RunKafkaSetupTask implements ServerSetupTask {
 
         container.start();
 
-        companion = new KafkaCompanion("INTERNAL://localhost:9092");
+        companion = new KafkaCompanion("INTERNAL://" + container.getHost() + ":9092");
 
         Map<String, Integer> topicsAndPartitions = getTopicsAndPartitions();
         if (topicsAndPartitions == null || topicsAndPartitions.isEmpty()) {

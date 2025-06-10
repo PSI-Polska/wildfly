@@ -42,7 +42,7 @@ public class RunKafkaWithSslSetupTask implements ServerSetupTask {
 
             // The KafkaContainer class doesn't play nicely when trying to make it use SSL
             container = new GenericContainer("apache/kafka-native:" + kafkaVersion);
-            container.setExposedPorts(Arrays.asList(9092, 19092));
+            container.setPortBindings(Arrays.asList("9092:9092", "19092:19092"));
             container.withCopyFileToContainer(
                     MountableFile.forHostPath(Path.of("src/test/resources/org/wildfly/test/integration/microprofile/reactive/messaging/kafka/ssl/server.properties")),
                     "/mnt/shared/config/server.properties"
@@ -60,7 +60,7 @@ public class RunKafkaWithSslSetupTask implements ServerSetupTask {
 
             container.start();
 
-            companion = new KafkaCompanion("INTERNAL://localhost:19092");
+            companion = new KafkaCompanion("INTERNAL://" + container.getHost() + ":19092");
             companion.topics().createAndWait("testing", 1, Duration.of(10, ChronoUnit.SECONDS));
         } catch (Exception e) {
             cleanupKafka();
