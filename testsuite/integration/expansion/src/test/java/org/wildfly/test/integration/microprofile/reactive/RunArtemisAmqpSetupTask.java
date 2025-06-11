@@ -41,6 +41,7 @@ public class RunArtemisAmqpSetupTask implements ServerSetupTask {
     private volatile String brokerXml = "messaging/amqp/broker.xml";
 
     private static final int AMQP_PORT = 5672;
+    private static final PathElement AMQP_HOST_PATH = PathElement.pathElement(SYSTEM_PROPERTY, "calculated.amqp.host");
     private static final PathElement AMQP_PORT_PATH = PathElement.pathElement(SYSTEM_PROPERTY, "calculated.amqp.port");
 
     public RunArtemisAmqpSetupTask() {
@@ -92,6 +93,12 @@ public class RunArtemisAmqpSetupTask implements ServerSetupTask {
             ModelNode op = Util.createAddOperation(PathAddress.pathAddress(AMQP_PORT_PATH), Map.of(VALUE, new ModelNode(amqpPort)));
             ModelNode result =  managementClient.getControllerClient().execute(op);
             ModelTestUtils.checkOutcome(result);
+
+            // Set the calculated host as a property in the model
+            String amqpHost = container.getHost();
+            op = Util.createAddOperation(PathAddress.pathAddress(AMQP_HOST_PATH), Map.of(VALUE, new ModelNode(amqpHost)));
+            result =  managementClient.getControllerClient().execute(op);
+            ModelTestUtils.checkOutcome(result);
         } catch (Exception e) {
             try {
                 tearDown(managementClient, containerId);
@@ -107,6 +114,9 @@ public class RunArtemisAmqpSetupTask implements ServerSetupTask {
     public void tearDown(ManagementClient managementClient, String containerId) throws Exception {
         try {
             ModelNode op = Util.createRemoveOperation(PathAddress.pathAddress(AMQP_PORT_PATH));
+            managementClient.getControllerClient().execute(op);
+
+            op = Util.createRemoveOperation(PathAddress.pathAddress(AMQP_HOST_PATH));
             managementClient.getControllerClient().execute(op);
 
             if (container != null) {
