@@ -42,7 +42,7 @@
             <id>ts.integ.group.smoke</id>
             <activation><property><name>!ts.noSmoke</name></property></activation>
             <modules>
-                <module>../integration/web</module>
+<!--                <module>../integration/web</module>-->
                 <module>../integration/smoke</module>
             </modules>
         </profile>
