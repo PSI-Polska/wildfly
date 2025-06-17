@@ -362,5 +362,14 @@
         <cve>CVE-2024-23450</cve>
         <cve>CVE-2024-23444</cve>
     </suppress>
+
+    <!-- Wildfly does not use com.sun.security.auth.module.LdapLoginModule -->
+    <suppress>
+        <notes><![CDATA[
+   file name: kafka-clients:3.6.0.jar
+   ]]></notes>
+        <packageUrl regex="true">^pkg:maven/org\.apache\.kafka/kafka-clients@3\.6\.0$</packageUrl>
+        <cve>CVE-2025-27818</cve>
+    </suppress>
     <!-- ___End of Wildfly-dist suppressions___ -->
 </suppressions>
