@@ -405,6 +405,7 @@
    ]]></notes>
         <packageUrl regex="true">^pkg:maven/org\.apache\.kafka/kafka-clients@3\.1\.2$</packageUrl>
         <cve>CVE-2025-27818</cve>
+        <cve>CVE-2025-27817</cve>
     </suppress>
 
     <!-- ___End of Wildfly-dist suppressions___ -->
