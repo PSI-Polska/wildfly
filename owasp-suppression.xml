@@ -342,7 +342,7 @@
         <packageUrl regex="true">^pkg:maven/org\.infinispan/infinispan-.*@13\.0\.22\.Final$</packageUrl>
         <cve>CVE-2023-5384</cve>
     </suppress>
-    
+
     <!-- Affected package lucene.replicator does not occur in WildFly 26 -->
     <suppress>
         <notes><![CDATA[
@@ -397,5 +397,15 @@
         <packageUrl regex="true">^pkg:maven/org\.hornetq/hornetq-.*@2\.4\..*\.Final$</packageUrl>
         <cve>CVE-2024-51127</cve>
     </suppress>
+
+    <!-- Wildfly does not use com.sun.security.auth.module.LdapLoginModule -->
+    <suppress>
+        <notes><![CDATA[
+   file name: kafka-clients:3.1.2.jar
+   ]]></notes>
+        <packageUrl regex="true">^pkg:maven/org\.apache\.kafka/kafka-clients@3\.1\.2$</packageUrl>
+        <cve>CVE-2025-27818</cve>
+    </suppress>
+
     <!-- ___End of Wildfly-dist suppressions___ -->
 </suppressions>
