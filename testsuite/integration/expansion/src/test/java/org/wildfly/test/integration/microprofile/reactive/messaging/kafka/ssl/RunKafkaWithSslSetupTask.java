@@ -54,7 +54,7 @@ public class RunKafkaWithSslSetupTask implements ServerSetupTask {
     public void setup(ManagementClient managementClient, String s) throws Exception {
         try {
             String dockerHost = DockerClientFactory.instance().dockerHostIpAddress();
-            KeystoreUtil.createKeystores( dockerHost );
+            KeystoreUtil.createKeystores(dockerHost);
             String kafkaVersion = WildFlySecurityManager.getPropertyPrivileged("wildfly.test.kafka.version", null);
             if (kafkaVersion == null) {
                 throw new IllegalArgumentException("Specify Kafka version with -Dwildfly.test.kafka.version");

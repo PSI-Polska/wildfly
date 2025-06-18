@@ -21,6 +21,7 @@ import org.jboss.as.controller.PathElement;
 import org.jboss.as.controller.operations.common.Util;
 import org.jboss.as.model.test.ModelTestUtils;
 import org.jboss.dmr.ModelNode;
+import org.testcontainers.DockerClientFactory;
 import org.testcontainers.containers.GenericContainer;
 import org.testcontainers.utility.DockerImageName;
 import org.testcontainers.utility.MountableFile;
@@ -77,7 +78,7 @@ public class RunArtemisAmqpSetupTask implements ServerSetupTask {
                     "/home/jboss/config/broker.xml"
             );
             if (copyKeystore) {
-                KeystoreUtil.createKeystores();
+                KeystoreUtil.createKeystores(DockerClientFactory.instance().dockerHostIpAddress());
                 // Copy the keystore files to the expected container location
                 // The subclass should have configured the keystore in the broker.xml
                 container.withCopyFileToContainer(
