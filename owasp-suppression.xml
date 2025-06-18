@@ -366,9 +366,9 @@
     <!-- Wildfly does not use com.sun.security.auth.module.LdapLoginModule and Server-Side Request Forgery -->
     <suppress>
         <notes><![CDATA[
-   file name: kafka-clients:3.6.0.jar
+   file name: kafka-clients-3.6.2.jar
    ]]></notes>
-        <packageUrl regex="true">^pkg:maven/org\.apache\.kafka/kafka-clients@3\.6\.0$</packageUrl>
+        <packageUrl regex="true">^pkg:maven/org\.apache\.kafka/kafka-clients@.*$</packageUrl>
         <cve>CVE-2025-27818</cve>
         <cve>CVE-2025-27817</cve>
     </suppress>
