@@ -372,5 +372,14 @@
         <cve>CVE-2025-27818</cve>
         <cve>CVE-2025-27817</cve>
     </suppress>
+
+    <!-- Package uses only in tests -->
+    <suppress>
+        <notes><![CDATA[
+   file name: mina-core-2.1.3.jar
+   ]]></notes>
+        <packageUrl regex="true">^pkg:maven/org\.apache\.mina/mina-core@.*$</packageUrl>
+        <cve>CVE-2024-52046</cve>
+    </suppress>
     <!-- ___End of Wildfly-dist suppressions___ -->
 </suppressions>
