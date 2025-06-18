@@ -41,7 +41,7 @@
             <id>ts.integ.group.smoke</id>
             <activation><property><name>!ts.noSmoke</name></property></activation>
             <modules>
-<!--                <module>../integration/web</module>-->
+                <module>../integration/web</module>
                 <module>../integration/smoke</module>
             </modules>
         </profile>
@@ -51,24 +51,24 @@
             <id>base.all-modules.module.profile</id>
             <activation><property><name>allTests</name></property></activation>
             <modules>
-<!--                <module>../integration/ws</module>-->
-<!--                <module>../test-feature-pack</module> &lt;!&ndash; needed by integration/basic &ndash;&gt;-->
-<!--                <module>../integration/basic</module>-->
-<!--                <module>../integration/clustering</module>-->
-<!--                <module>../integration/elytron</module>-->
-<!--                <module>../integration/elytron-oidc-client</module>-->
-<!--                <module>../integration/vdx</module>-->
-<!--                <module>../integration/iiop</module>-->
-<!--                <module>../integration/xts</module>-->
-<!--                <module>../integration/rts</module>-->
-<!--                <module>../integration/rbac</module>-->
-<!--                <module>../integration/multinode</module>-->
-<!--                <module>../test-product-conf</module> &lt;!&ndash; needed by manualmode &ndash;&gt;-->
-<!--                <module>../integration/manualmode</module>-->
-<!--                <module>../integration/secman</module>-->
-<!--                <module>../integration/legacy</module>-->
-<!--                <module>../domain</module>-->
-<!--                <module>../scripts</module>-->
+                <module>../integration/ws</module>
+                <module>../test-feature-pack</module> <!-- needed by integration/basic -->
+                <module>../integration/basic</module>
+                <module>../integration/clustering</module>
+                <module>../integration/elytron</module>
+                <module>../integration/elytron-oidc-client</module>
+                <module>../integration/vdx</module>
+                <module>../integration/iiop</module>
+                <module>../integration/xts</module>
+                <module>../integration/rts</module>
+                <module>../integration/rbac</module>
+                <module>../integration/multinode</module>
+                <module>../test-product-conf</module> <!-- needed by manualmode -->
+                <module>../integration/manualmode</module>
+                <module>../integration/secman</module>
+                <module>../integration/legacy</module>
+                <module>../domain</module>
+                <module>../scripts</module>
             </modules>
         </profile>
 
@@ -85,7 +85,7 @@
             <activation><property><name>integ.module</name></property></activation>
             <modules>
                 <module>../integration/ws</module>
-<!--                <module>../integration/web</module>-->
+                <module>../integration/web</module>
                 <module>../integration/smoke</module>
                 <module>../test-feature-pack</module> <!-- needed by integration/basic -->
                 <module>../integration/basic</module>
@@ -196,7 +196,7 @@
             <activation><property><name>ts.integration</name></property></activation>
             <modules>
                 <module>../integration/ws</module>
-<!--                <module>../integration/web</module>-->
+                <module>../integration/web</module>
                 <module>../integration/smoke</module>
                 <module>../test-feature-pack</module> <!-- needed by integration/basic -->
                 <module>../integration/basic</module>

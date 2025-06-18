@@ -43,8 +43,8 @@
             <activation><property><name>allTests</name></property></activation>
             <modules>
                 <module>../integration/expansion</module>
-<!--                <module>../integration/microprofile-tck</module>-->
-<!--                <module>../integration/manualmode-expansion</module>-->
+                <module>../integration/microprofile-tck</module>
+                <module>../integration/manualmode-expansion</module>
             </modules>
         </profile>
 
