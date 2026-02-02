@@ -29,6 +29,7 @@ import org.jboss.as.subsystem.test.KernelServicesBuilder;
 import org.jboss.as.subsystem.test.LegacyKernelServicesInitializer;
 import org.jboss.dmr.ModelNode;
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.wildfly.clustering.server.service.ClusteringDefaultRequirement;
 
@@ -176,6 +177,7 @@ public class JcaSubsystemTestCase extends AbstractSubsystemBaseTest {
     }
 
     /** WFLY-16478. Test transformation of undefined elytron-enabled */
+    @Ignore("Doesn't work with GAR")
     @Test
     public void testEAP74Transformation() throws Exception {
         ModelTestControllerVersion eap74ControllerVersion = ModelTestControllerVersion.EAP_7_4_0;
