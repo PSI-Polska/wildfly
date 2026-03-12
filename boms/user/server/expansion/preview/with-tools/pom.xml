@@ -85,6 +85,12 @@
                             <includePlugins>
                                 <includePlugin>org.wildfly.plugins:wildfly-maven-plugin</includePlugin>
                             </includePlugins>
+                            <excludeDependencies>
+                                <dependency>
+                                    <groupId>org.wildfly.galleon-plugins</groupId>
+                                    <artifactId>transformer</artifactId>
+                                </dependency>
+                            </excludeDependencies>
                         </configuration>
                     </execution>
                 </executions>
