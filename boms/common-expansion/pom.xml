@@ -613,17 +613,18 @@
                     </exclusion>
                 </exclusions>
             </dependency>
-            <dependency>
-                <groupId>io.opentelemetry.instrumentation</groupId>
-                <artifactId>opentelemetry-java-http-client</artifactId>
-                <version>${version.io.opentelemetry.opentelemetry}-alpha</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>*</groupId>
-                        <artifactId>*</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
+            <!-- todo-->
+<!--            <dependency>-->
+<!--                <groupId>io.opentelemetry.instrumentation</groupId>-->
+<!--                <artifactId>opentelemetry-java-http-client</artifactId>-->
+<!--                <version>${version.io.opentelemetry.opentelemetry}-alpha</version>-->
+<!--                <exclusions>-->
+<!--                    <exclusion>-->
+<!--                        <groupId>*</groupId>-->
+<!--                        <artifactId>*</artifactId>-->
+<!--                    </exclusion>-->
+<!--                </exclusions>-->
+<!--            </dependency>-->
             <dependency>
                 <groupId>io.opentelemetry.instrumentation</groupId>
                 <artifactId>opentelemetry-runtime-telemetry-java8</artifactId>
