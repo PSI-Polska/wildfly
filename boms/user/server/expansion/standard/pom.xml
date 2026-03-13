@@ -89,6 +89,12 @@
                             <includeDependencies combine.children="append">
                                 <!-- include here any <dependency /> exclusive to this BOM -->
                             </includeDependencies>
+                            <excludeDependencies>
+                                <dependency>
+                                    <groupId>io.opentelemetry.instrumentation</groupId>
+                                    <artifactId>opentelemetry-java-http-client</artifactId>
+                                </dependency>
+                            </excludeDependencies>
                         </configuration>
                     </execution>
                 </executions>
