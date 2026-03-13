@@ -91,71 +91,62 @@
         </dependency>
 
         <dependency>
-            <groupId>org.apache.activemq</groupId>
+            <groupId>org.apache.artemis</groupId>
             <artifactId>artemis-core-client</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>org.apache.activemq</groupId>
+            <groupId>org.apache.artemis</groupId>
             <artifactId>artemis-server</artifactId>
         </dependency>
 
+        <!--
+        This dependecy on artemis-cli is required for the import/export journal operation.
+        Thus all the transitive dependencies not strictly required should be excluded.
+        -->
         <dependency>
-            <groupId>org.apache.activemq</groupId>
+            <groupId>org.apache.artemis</groupId>
             <artifactId>artemis-cli</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.apache.qpid</groupId>
-                    <artifactId>qpid-jms-client</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.apache.activemq</groupId>
-                    <artifactId>artemis-jms-client</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.apache.activemq</groupId>
-                    <artifactId>artemis-jms-server</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.jline</groupId>
-                    <artifactId>jline</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
 
         <dependency>
-            <groupId>org.apache.activemq</groupId>
+            <groupId>org.apache.artemis</groupId>
             <artifactId>artemis-commons</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>org.apache.activemq</groupId>
+            <groupId>org.apache.artemis</groupId>
             <artifactId>artemis-dto</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>org.apache.activemq</groupId>
+            <groupId>org.apache.artemis</groupId>
             <artifactId>artemis-journal</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>org.apache.activemq</groupId>
+            <groupId>org.apache.artemis</groupId>
             <artifactId>artemis-jakarta-client</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>org.apache.activemq</groupId>
+            <groupId>org.apache.artemis</groupId>
             <artifactId>artemis-jakarta-server</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>org.apache.activemq</groupId>
+            <groupId>org.apache.artemis</groupId>
             <artifactId>artemis-jakarta-ra</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>org.apache.activemq</groupId>
+            <groupId>org.apache.artemis</groupId>
             <artifactId>artemis-jakarta-service-extensions</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.artemis</groupId>
+            <artifactId>artemis-jdbc-store</artifactId>
         </dependency>
 
         <!-- This is only required for the MessagingExtension to initialize Netty's InternalLoggerFactory -->
