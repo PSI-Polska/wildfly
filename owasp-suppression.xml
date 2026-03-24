@@ -381,5 +381,20 @@
         <packageUrl regex="true">^pkg:maven/org\.apache\.mina/mina-core@.*$</packageUrl>
         <cve>CVE-2024-52046</cve>
     </suppress>
+    <!--  Fix was backported from newer version of Wildfly   -->
+    <suppress>
+        <notes><![CDATA[
+   file name: wildfly-*.jar
+   ]]></notes>
+        <packageUrl regex="true">^pkg:maven/org\.wildfly\.core/wildfly-.*@.*$</packageUrl>
+        <cve>CVE-2025-23368</cve>
+    </suppress>
+    <suppress>
+        <notes><![CDATA[
+   file name: launcher.jar
+   ]]></notes>
+        <filePath regex="true">.*\bbin[/\\]launcher\.jar</filePath>
+        <cve>CVE-2025-23368</cve>
+    </suppress>
     <!-- ___End of Wildfly-dist suppressions___ -->
 </suppressions>
