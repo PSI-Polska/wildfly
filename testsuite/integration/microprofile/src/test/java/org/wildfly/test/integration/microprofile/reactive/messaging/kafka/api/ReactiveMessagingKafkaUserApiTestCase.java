@@ -7,7 +7,6 @@ package org.wildfly.test.integration.microprofile.reactive.messaging.kafka.api;
 
 import io.smallrye.reactive.messaging.kafka.api.IncomingKafkaRecordMetadata;
 import jakarta.inject.Inject;
-import kafka.server.KafkaConfig;
 import org.apache.kafka.common.header.Header;
 import org.apache.kafka.common.header.Headers;
 import org.apache.kafka.common.record.TimestampType;
@@ -26,12 +25,12 @@ import org.junit.runner.RunWith;
 import org.wildfly.test.integration.microprofile.reactive.EnableReactiveExtensionsSetupTask;
 import org.wildfly.test.integration.microprofile.reactive.RunKafkaSetupTask;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Map;
-import java.util.Properties;
 import java.util.PropertyPermission;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
@@ -249,9 +248,10 @@ public class ReactiveMessagingKafkaUserApiTestCase {
 
     public static class CustomRunKafkaSetupTask extends RunKafkaSetupTask {
 
+
         @Override
-        protected void addBrokerProperties(Properties brokerProperties) {
-            brokerProperties.put(KafkaConfig.NumPartitionsProp(), String.valueOf(getPartitions()));
+        protected Map<String, String> extraBrokerProperties() {
+            return Collections.singletonMap("KAFKA_NUM_PARTITIONS", String.valueOf(getPartitions()));
         }
 
         @Override
