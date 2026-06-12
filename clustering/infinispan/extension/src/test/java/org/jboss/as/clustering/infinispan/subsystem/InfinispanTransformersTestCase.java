@@ -106,7 +106,7 @@ public class InfinispanTransformersTestCase extends OperationTestCaseBase {
                 ;
     }
 
-    @Ignore("Doesn't work with GAR")
+//    @Ignore("Doesn't work with GAR")
     @Test
     public void testTransformerEAP740() throws Exception {
         testTransformation(ModelTestControllerVersion.EAP_7_4_0);
