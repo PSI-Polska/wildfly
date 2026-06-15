@@ -848,6 +848,16 @@
                 </exclusions>
             </dependency>
 
+            <dependency>
+                <groupId>org.apache.maven.resolver</groupId>
+                <artifactId>maven-resolver-api</artifactId>
+                <version>1.9.27</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.maven.resolver</groupId>
+                <artifactId>maven-resolver-impl</artifactId>
+                <version>1.9.27</version>
+            </dependency>
         </dependencies>
 
     </dependencyManagement>
