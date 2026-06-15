@@ -1356,6 +1356,13 @@
             </plugin>
 
         </plugins>
+        <extensions>
+            <extension>
+                <groupId>com.google.cloud.artifactregistry</groupId>
+                <artifactId>artifactregistry-maven-wagon</artifactId>
+<!--                <version>2.1.0</version>-->
+            </extension>
+        </extensions>
     </build>
 
     <!-- Profiles -->
