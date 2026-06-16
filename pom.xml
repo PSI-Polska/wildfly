@@ -893,6 +893,11 @@
                 <artifactId>artifactregistry-maven-wagon</artifactId>
                 <version>2.2.5</version>
             </dependency>
+            <dependency>
+                <groupId>org.wildfly.core</groupId>
+                <artifactId>wildfly-subsystem-test-framework</artifactId>
+                <version>23.0.3-12-PSI</version>
+            </dependency>
         </dependencies>
 
     </dependencyManagement>
