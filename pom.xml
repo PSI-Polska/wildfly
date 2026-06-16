@@ -851,42 +851,42 @@
             <dependency>
                 <groupId>org.apache.maven.resolver</groupId>
                 <artifactId>maven-resolver-api</artifactId>
-                <version>1.9.27</version>
+                <version>1.9.18</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.maven.resolver</groupId>
                 <artifactId>maven-resolver-connector-basic</artifactId>
-                <version>1.9.27</version>
+                <version>1.9.18</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.maven.resolver</groupId>
                 <artifactId>maven-resolver-spi</artifactId>
-                <version>1.9.27</version>
+                <version>1.9.18</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.maven.resolver</groupId>
                 <artifactId>maven-resolver-transport-file</artifactId>
-                <version>1.9.27</version>
+                <version>1.9.18</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.maven.resolver</groupId>
                 <artifactId>maven-resolver-util</artifactId>
-                <version>1.9.27</version>
+                <version>1.9.18</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.maven.resolver</groupId>
                 <artifactId>maven-resolver-impl</artifactId>
-                <version>1.9.27</version>
+                <version>1.9.18</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.maven.resolver</groupId>
                 <artifactId>maven-resolver-supplier</artifactId>
-                <version>1.9.27</version>
+                <version>1.9.18</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.maven.resolver</groupId>
                 <artifactId>maven-resolver-transport-wagon</artifactId>
-                <version>1.9.27</version>
+                <version>1.9.18</version>
             </dependency>
             <dependency>
                 <groupId>com.google.cloud.artifactregistry</groupId>
