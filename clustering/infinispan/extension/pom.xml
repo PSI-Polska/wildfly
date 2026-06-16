@@ -273,20 +273,18 @@
 <!--            <artifactId>wildfly-subsystem-test-framework</artifactId>-->
 <!--            <version>23.0.3-12-PSI</version>-->
 <!--        </dependency>-->
-        <!-- Obsługa transportu Wagon dla wbudowanego resolvera w testach -->
-<!--        <dependency>-->
-<!--            <groupId>org.apache.maven.resolver</groupId>-->
-<!--            <artifactId>maven-resolver-transport-wagon</artifactId>-->
-<!--            <version>1.9.18</version> &lt;!&ndash; Dopasuj do wersji resolvera, jakiej używasz &ndash;&gt;-->
-<!--            <scope>test</scope>-->
-<!--        </dependency>-->
-<!--        &lt;!&ndash; Wtyczka Google Cloud dla Wagona &ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>com.google.cloud.artifactregistry</groupId>-->
-<!--            <artifactId>artifactregistry-maven-wagon</artifactId>-->
-<!--            <version>2.2.5</version>-->
-<!--            <scope>test</scope>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>org.apache.maven.resolver</groupId>
+            <artifactId>maven-resolver-transport-wagon</artifactId>
+            <version>1.9.18</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.cloud.artifactregistry</groupId>
+            <artifactId>artifactregistry-maven-wagon</artifactId>
+            <version>2.2.5</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <profiles>
