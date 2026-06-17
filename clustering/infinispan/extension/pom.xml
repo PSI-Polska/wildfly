@@ -307,5 +307,32 @@
                 <version>2.2.5</version>
             </extension>
         </extensions>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>3.1.0</version>
+                <executions>
+                    <execution>
+                        <id>remove-remote-repositories-metadata</id>
+                        <!-- Uruchamia się po kompilacji, ale tuż przed testami -->
+                        <phase>process-test-classes</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <target>
+                                <echo message="Czyszczenie plików _remote.repositories na Jenkinsie..." />
+                                <!-- Usuwa wszystkie pliki _remote.repositories z lokalnego repozytorium -->
+                                <delete>
+                                    <fileset dir="${settings.localRepository}" includes="**/_remote.repositories" />
+                                    <fileset dir="${settings.localRepository}" includes="**/_maven.repositories" />
+                                </delete>
+                            </target>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
     </build>
 </project>
