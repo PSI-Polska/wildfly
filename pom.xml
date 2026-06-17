@@ -1140,6 +1140,7 @@
                                             <!-- Jandex moved to SmallRye -->
                                             <exclude>org.jboss:jandex</exclude>
                                             <exclude>com.google.cloud.artifactregistry:artifactregistry-maven-wagon</exclude>
+                                            <exclude>org.wildfly.core:wildfly-subsystem-test</exclude>
                                         </excludes>
                                     </bannedDependencies>
                                     <dependencyConvergence></dependencyConvergence>
