@@ -65,13 +65,11 @@ public class WeldSubsystemTestCase extends AbstractSubsystemBaseTest {
         standardSubsystemTest("subsystem_with_expression.xml");
     }
 
-    @Ignore("Doesn't work with GAR")
     @Test
     public void testTransformerEAP740() throws Exception {
         testTransformer(ModelTestControllerVersion.EAP_7_4_0, true);
     }
 
-    @Ignore("Doesn't work with GAR")
     @Test
     public void testTransformersRejectionEAP740() throws Exception {
         testTransformersRejection(ModelTestControllerVersion.EAP_7_4_0);

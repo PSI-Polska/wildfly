@@ -74,7 +74,6 @@ public class DatasourcesSubsystemTestCase extends AbstractSubsystemBaseTest {
         standardSubsystemTest("datasources-elytron-enabled-expression.xml", "datasources-elytron-enabled.xml");
     }
 
-    @Ignore("Doesn't work with GAR")
     @Test
     public void testRejectionsEAP74() throws Exception {
         testTransformerEAP74Rejection("datasources-validation-custom-modules-reject.xml");

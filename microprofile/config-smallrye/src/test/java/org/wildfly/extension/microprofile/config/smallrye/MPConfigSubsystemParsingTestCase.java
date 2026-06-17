@@ -50,7 +50,6 @@ public class MPConfigSubsystemParsingTestCase extends AbstractSubsystemBaseTest 
         return System.getProperties();
     }
 
-    @Ignore("Doesn't work with GAR")
     @Test
     public void testRejectingTransformersEAP_XP4() throws Exception {
         testRejectingTransformers(ModelTestControllerVersion.EAP_XP_4, VERSION_1_1_0);

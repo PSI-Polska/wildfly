@@ -74,7 +74,6 @@ public class ResourceAdaptersTransformersTestCase extends AbstractSubsystemBaseT
      *
      * @throws Exception if an error occurs during the kernel initialization or the subsystem transformation validation.
      */
-    @Ignore("Doesn't work with GAR")
     @Test
     public void test740transformers() throws Exception {
         testTransformer(ModelTestControllerVersion.EAP_7_4_0);

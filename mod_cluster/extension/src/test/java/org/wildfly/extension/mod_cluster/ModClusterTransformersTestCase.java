@@ -67,7 +67,6 @@ public class ModClusterTransformersTestCase extends AbstractSubsystemTest {
         throw new IllegalArgumentException();
     }
 
-    @Ignore("Doesn't work with GAR")
     @Test
     public void testTransformations() throws Exception {
         this.testTransformations(version);
@@ -114,8 +113,6 @@ public class ModClusterTransformersTestCase extends AbstractSubsystemTest {
             return model;
         };
     }
-
-    @Ignore("Doesn't work with GAR")
     @Test
     public void testRejections() throws Exception {
         this.testRejections(version);

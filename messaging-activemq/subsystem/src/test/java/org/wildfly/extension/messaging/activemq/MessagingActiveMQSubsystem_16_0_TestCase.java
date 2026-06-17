@@ -139,13 +139,11 @@ public class MessagingActiveMQSubsystem_16_0_TestCase extends AbstractSubsystemB
         testTransformers(ModelTestControllerVersion.MASTER, MessagingExtension.VERSION_13_0_0);
     }
 
-    @Ignore("Doesn't work with GAR")
     @Test
     public void testTransformersEAP_7_4_0() throws Exception {
         testTransformers(EAP_7_4_0, MessagingExtension.VERSION_13_0_0);
     }
 
-    @Ignore("Doesn't work with GAR")
     @Test
     public void testRejectingTransformersEAP_7_4_0() throws Exception {
         testRejectingTransformers(EAP_7_4_0, MessagingExtension.VERSION_13_0_0);

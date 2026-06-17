@@ -148,7 +148,6 @@ public class JBeretSubsystemParsingTestCase extends AbstractBatchTestCase {
         }
     }
 
-    @Ignore("Doesn't work with GAR")
     @Test
     public void testRejectingTransformersEAP74() throws Exception {
         FailedOperationTransformationConfig transformationConfig = new FailedOperationTransformationConfig();

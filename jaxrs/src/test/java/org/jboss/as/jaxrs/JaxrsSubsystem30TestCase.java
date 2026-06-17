@@ -51,7 +51,6 @@ public class JaxrsSubsystem30TestCase extends AbstractSubsystemBaseTest {
         standardSubsystemTest("jaxrs-expressions.xml");
     }
 
-    @Ignore("Doesn't work with GAR")
     @Test
     public void testRejectingTransformersEAP74() throws Exception {
         FailedOperationTransformationConfig transformationConfig = new FailedOperationTransformationConfig();

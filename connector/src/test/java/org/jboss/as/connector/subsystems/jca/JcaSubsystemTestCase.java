@@ -177,7 +177,7 @@ public class JcaSubsystemTestCase extends AbstractSubsystemBaseTest {
     }
 
     /** WFLY-16478. Test transformation of undefined elytron-enabled */
-    @Ignore("Doesn't work with GAR")
+
     @Test
     public void testEAP74Transformation() throws Exception {
         ModelTestControllerVersion eap74ControllerVersion = ModelTestControllerVersion.EAP_7_4_0;

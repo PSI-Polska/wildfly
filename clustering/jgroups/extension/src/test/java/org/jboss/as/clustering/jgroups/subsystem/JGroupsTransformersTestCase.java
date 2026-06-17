@@ -68,7 +68,6 @@ public class JGroupsTransformersTestCase extends OperationTestCaseBase {
                 ;
     }
 
-    @Ignore("Doesn't work with GAR")
     @Test
     public void testTransformerEAP740() throws Exception {
         testTransformation(ModelTestControllerVersion.EAP_7_4_0);
@@ -104,7 +103,6 @@ public class JGroupsTransformersTestCase extends OperationTestCaseBase {
         checkSubsystemModelTransformation(services, version, null, false);
     }
 
-    @Ignore("Doesn't work with GAR")
     @Test
     public void testRejectionsEAP740() throws Exception {
         testRejections(ModelTestControllerVersion.EAP_7_4_0);

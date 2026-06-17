@@ -105,7 +105,6 @@ public class DistributableWebTransformerTestCase extends AbstractSubsystemTest {
     /**
      * Tests transformation of model from current version into specified version.
      */
-    @Ignore("Doesn't work with GAR")
     @Test
     public void testTransformation() throws Exception {
         String subsystemXmlResource = String.format("wildfly-distributable-web-transform-%d_%d_%d.xml", this.version.getMajor(), this.version.getMinor(), this.version.getMicro());
@@ -133,7 +132,6 @@ public class DistributableWebTransformerTestCase extends AbstractSubsystemTest {
     /**
      * Tests rejected transformation of the model from current version into specified version.
      */
-    @Ignore("Doesn't work with GAR")
     @Test
     public void testRejections() throws Exception {
         // create builder for current subsystem version

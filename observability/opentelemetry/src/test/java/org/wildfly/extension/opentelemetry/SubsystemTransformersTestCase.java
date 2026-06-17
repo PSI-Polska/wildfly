@@ -29,7 +29,6 @@ public class SubsystemTransformersTestCase extends AbstractSubsystemTest {
         super(OpenTelemetrySubsystemExtension.SUBSYSTEM_NAME, new OpenTelemetrySubsystemExtension());
     }
 
-    @Ignore("Doesn't work with GAR")
     @Test
     public void testTransformerEAPXP4() throws Exception {
         testTransformation(ModelTestControllerVersion.EAP_XP_4);

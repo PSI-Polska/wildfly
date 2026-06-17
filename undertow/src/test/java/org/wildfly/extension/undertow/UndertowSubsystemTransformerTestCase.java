@@ -106,7 +106,6 @@ public class UndertowSubsystemTransformerTestCase extends AbstractSubsystemTest 
         }
     }
 
-    @Ignore("Doesn't work with GAR")
     @Test
     public void testTransformations() throws Exception {
         KernelServicesBuilder builder = this.createKernelServicesBuilder(this.createAdditionalInitialization()).setSubsystemXml(this.readResource("undertow-transform.xml"));
@@ -121,7 +120,6 @@ public class UndertowSubsystemTransformerTestCase extends AbstractSubsystemTest 
         this.checkSubsystemModelTransformation(services, this.modelVersion, fixer, false);
     }
 
-    @Ignore("Doesn't work with GAR")
     @Test
     public void testRejections() throws Exception {
         KernelServicesBuilder builder = this.createKernelServicesBuilder(this.createAdditionalInitialization());
