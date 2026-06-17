@@ -1725,6 +1725,16 @@
                     <url>https://repository.jboss.org/nexus/content/groups/staging/</url>
                     <layout>default</layout>
                 </repository>
+                <repository>
+                    <id>repo-1</id>
+                    <url>https://europe-west3-maven.pkg.dev/psi-de-0-dev-cft-pjfc/maven-group-all/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </repository>
             </repositories>
             <pluginRepositories>
                 <pluginRepository>
