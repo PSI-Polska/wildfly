@@ -17,7 +17,6 @@ import org.jboss.as.subsystem.test.KernelServices;
 import org.jboss.as.subsystem.test.KernelServicesBuilder;
 import org.jboss.dmr.ModelType;
 import org.junit.Assert;
-import org.junit.Ignore;
 import org.junit.Test;
 
 /**
