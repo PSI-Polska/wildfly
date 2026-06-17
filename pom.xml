@@ -1139,6 +1139,7 @@
                                             <exclude>xml-apis:xml-apis</exclude>
                                             <!-- Jandex moved to SmallRye -->
                                             <exclude>org.jboss:jandex</exclude>
+                                            <exclude>com.google.cloud.artifactregistry:artifactregistry-maven-wagon</exclude>
                                         </excludes>
                                     </bannedDependencies>
                                     <dependencyConvergence></dependencyConvergence>
