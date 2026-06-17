@@ -847,57 +847,6 @@
                     </exclusion>
                 </exclusions>
             </dependency>
-
-            <dependency>
-                <groupId>org.apache.maven.resolver</groupId>
-                <artifactId>maven-resolver-api</artifactId>
-                <version>1.9.18</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.maven.resolver</groupId>
-                <artifactId>maven-resolver-connector-basic</artifactId>
-                <version>1.9.18</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.maven.resolver</groupId>
-                <artifactId>maven-resolver-spi</artifactId>
-                <version>1.9.18</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.maven.resolver</groupId>
-                <artifactId>maven-resolver-transport-file</artifactId>
-                <version>1.9.18</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.maven.resolver</groupId>
-                <artifactId>maven-resolver-util</artifactId>
-                <version>1.9.18</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.maven.resolver</groupId>
-                <artifactId>maven-resolver-impl</artifactId>
-                <version>1.9.18</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.maven.resolver</groupId>
-                <artifactId>maven-resolver-supplier</artifactId>
-                <version>1.9.18</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.maven.resolver</groupId>
-                <artifactId>maven-resolver-transport-wagon</artifactId>
-                <version>1.9.18</version>
-            </dependency>
-            <dependency>
-                <groupId>com.google.cloud.artifactregistry</groupId>
-                <artifactId>artifactregistry-maven-wagon</artifactId>
-                <version>2.2.5</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wildfly.core</groupId>
-                <artifactId>wildfly-subsystem-test-framework</artifactId>
-                <version>23.0.3-12-PSI</version>
-            </dependency>
         </dependencies>
 
     </dependencyManagement>
@@ -916,16 +865,6 @@
             <name>JBoss Public Repository Group</name>
             <url>${maven.repository.url}</url>
             <layout>default</layout>
-        </repository>
-        <repository>
-            <id>repo-1</id>
-            <url>https://europe-west3-maven.pkg.dev/psi-de-0-dev-cft-pjfc/maven-group-all/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
         </repository>
     </repositories>
 
@@ -1024,154 +963,153 @@
                 </plugin>
 
                 <!-- Ban bad dependencies and require Java 11 for deploying -->
-<!--                <plugin>-->
-<!--                    <groupId>org.apache.maven.plugins</groupId>-->
-<!--                    <artifactId>maven-enforcer-plugin</artifactId>-->
-<!--                    <version>${version.enforcer.plugin}</version>-->
-<!--                    <executions>-->
-<!--                        <execution>-->
-<!--                            <id>ban-bad-dependencies</id>-->
-<!--                            <goals>-->
-<!--                                <goal>enforce</goal>-->
-<!--                            </goals>-->
-<!--                            <configuration>-->
-<!--                                <rules>-->
-<!--                                    <bannedDependencies>-->
-<!--                                        <searchTransitive>true</searchTransitive>-->
-<!--                                        <excludes>-->
-<!--                                            <exclude>args4j:args4j</exclude>-->
-<!--                                            <exclude>biz.aQute:bnd</exclude>-->
-<!--                                            <exclude>ch.qos.reload4j:reload4j</exclude>-->
-<!--                                            <exclude>com.google.gwt.inject:gin</exclude>-->
-<!--                                            <exclude>com.google.inject:guice</exclude>-->
-<!--                                            <exclude>com.gwtplatform:gwtp-all</exclude>-->
-<!--                                            <exclude>com.sun.activation:javax.activation</exclude>-->
-<!--                                            <exclude>com.sun.mail:javax.mail</exclude>-->
-<!--                                            <exclude>com.sun.xml.bind:jaxb-core</exclude>-->
-<!--                                            <exclude>com.sun.xml.bind:jaxb-impl</exclude>-->
-<!--                                            <exclude>com.sun.xml.bind:jaxb-xjc</exclude>-->
-<!--                                            <exclude>commons-httpclient:commons-httpclient</exclude>-->
-<!--                                            <exclude>commons-logging:commons-logging</exclude>-->
-<!--                                            <exclude>commons-logging:commons-logging-api</exclude>-->
-<!--                                            <exclude>concurrent:concurrent</exclude>-->
-<!--                                            <exclude>dom4j:dom4j</exclude>-->
-<!--                                            <exclude>jacorb:jacorb</exclude>-->
-<!--                                            <exclude>javassist:javassist</exclude>-->
-<!--                                            <exclude>javax.activation:activation</exclude>-->
-<!--                                            <exclude>javax.activation:javax.activation-api</exclude>-->
-<!--                                            <exclude>javax.enterprise:cdi-api</exclude>-->
-<!--                                            <exclude>javax.inject:javax.inject</exclude>-->
-<!--                                            <exclude>javax.json:javax.json-api</exclude>-->
-<!--                                            <exclude>javax.persistence:javax.persistence-api</exclude>-->
-<!--                                            <exclude>javax.persistence:persistence-api</exclude>-->
-<!--                                            <exclude>javax.security.enterprise:javax.security.enterprise-api</exclude>-->
-<!--                                            <exclude>javax.servlet:servlet-api</exclude>-->
-<!--                                            <exclude>javax.transaction:jta</exclude>-->
-<!--                                            <exclude>javax.validation:validation-api</exclude>-->
-<!--                                            <exclude>javax.xml:jaxrpc-api</exclude>-->
-<!--                                            <exclude>javax.xml.bind:jaxb-api</exclude>-->
-<!--                                            <exclude>javax.xml.soap:saaj-api</exclude>-->
-<!--                                            <exclude>javax.xml.stream:stax-api</exclude>-->
-<!--                                            <exclude>jboss:jboss-logging-spi</exclude>-->
-<!--                                            <exclude>jboss:jboss-serialization</exclude>-->
-<!--                                            <exclude>jboss.web:el-api</exclude>-->
-<!--                                            <exclude>jboss.web:jsp-api</exclude>-->
-<!--                                            <exclude>jboss.web:servlet-api</exclude>-->
-<!--                                            <exclude>log4j:log4j</exclude>-->
-<!--                                            <exclude>net.sf.kxml:kxml2</exclude>-->
-<!--                                            <exclude>org.apache.geronimo.specs:geronimo-activation_1.1_spec</exclude>-->
-<!--                                            <exclude>org.apache.geronimo.specs:geronimo-jaxb_2.1_spec</exclude>-->
-<!--                                            <exclude>org.apache.geronimo.specs:geronimo-saaj_1.3_spec</exclude>-->
-<!--                                            <exclude>org.apache.geronimo.specs:geronimo-stax-api_1.0_spec</exclude>-->
-<!--                                            <exclude>org.apache.xalan:serializer</exclude>-->
-<!--                                            <exclude>org.apache.xalan:xalan</exclude>-->
-<!--                                            &lt;!&ndash; replaced by org.bouncycastle:*-jdk18on &ndash;&gt;-->
-<!--                                            <exclude>org.bouncycastle:bcpg-jdk15on</exclude>-->
-<!--                                            <exclude>org.bouncycastle:bcprov-jdk15on</exclude>-->
-<!--                                            <exclude>org.bouncycastle:bcpkix-jdk15on</exclude>-->
-<!--                                            <exclude>org.bouncycastle:bcutil-jdk15on</exclude>-->
-<!--                                            <exclude>org.codehaus.jackson:jackson-core-asl</exclude>-->
-<!--                                            <exclude>org.codehaus.jackson:jackson-jaxrs</exclude>-->
-<!--                                            <exclude>org.codehaus.jackson:jackson-mapper-asl</exclude>-->
-<!--                                            <exclude>org.codehaus.jackson:jackson-xc</exclude>-->
-<!--                                            <exclude>org.glassfish:javax.json</exclude>-->
-<!--                                            <exclude>org.glassfish.soteria:javax.security.enterprise</exclude>-->
-<!--                                            <exclude>org.hibernate:ejb3-persistence</exclude>-->
-<!--                                            <exclude>org.hibernate.java-persistence:jpa-api</exclude>-->
-<!--                                            &lt;!&ndash; replaced by wildfly-naming-client &ndash;&gt;-->
-<!--                                            <exclude>org.jboss:jboss-remote-naming</exclude>-->
-<!--                                            &lt;!&ndash;<exclude>org.jboss:jboss-common-core</exclude>&ndash;&gt;-->
-<!--                                            <exclude>org.jboss.integration:jboss-jca-spi</exclude>-->
-<!--                                            <exclude>org.jboss.interceptor:jboss-interceptor-api</exclude>-->
-<!--                                            <exclude>org.jboss.javaee:jboss-javaee</exclude>-->
-<!--                                            <exclude>org.jboss.javaee:jboss-jacc-api</exclude>-->
-<!--                                            <exclude>org.jboss.javaee:jboss-jad-api</exclude>-->
-<!--                                            <exclude>org.jboss.javaee:jboss-jaspi-api</exclude>-->
-<!--                                            <exclude>org.jboss.javaee:jboss-jca-api</exclude>-->
-<!--                                            <exclude>org.jboss.javaee:jboss-jms-api</exclude>-->
-<!--                                            <exclude>org.jboss.javaee:servlet-api</exclude>-->
-<!--                                            <exclude>org.jboss.javaee:jsp-api</exclude>-->
-<!--                                            <exclude>org.jboss.javaee:jboss-transaction-api</exclude>-->
-<!--                                            <exclude>org.jboss.logging:jboss-logging-generator</exclude>-->
-<!--                                            <exclude>org.jboss.logging:jboss-logging-log4j</exclude>-->
-<!--                                            <exclude>org.jboss.logging:jboss-logging-jdk</exclude>-->
-<!--                                            <exclude>org.jboss.logging:jboss-logging-logmanager</exclude>-->
-<!--                                            <exclude>org.jboss.logging:jboss-logging-spi</exclude>-->
-<!--                                            <exclude>org.jboss.logging:jboss-logging-tools</exclude>-->
-<!--                                            &lt;!&ndash; replaced by io.netty:netty &ndash;&gt;-->
-<!--                                            <exclude>org.jboss.netty:netty</exclude>-->
-<!--                                            &lt;!&ndash; replaced by io.netty:netty-all &ndash;&gt;-->
-<!--                                            <exclude>io.netty:netty</exclude>-->
-<!--                                            <exclude>org.jboss.remoting3:jboss-remoting</exclude>-->
-<!--                                            <exclude>org.jboss.security:jbosssx</exclude>-->
-<!--                                            &lt;!&ndash; replaced by wildfly-elytron &ndash;&gt;-->
-<!--                                            <exclude>org.jboss.sasl:jboss-sasl</exclude>-->
-<!--                                            <exclude>org.jboss.slf4j:slf4j-jboss-logging</exclude>-->
-<!--                                            <exclude>org.jboss.spec.javax.resource:jboss-connector-api_1.5_spec</exclude>-->
-<!--                                            <exclude>org.jboss.spec.javax.transaction:jboss-transaction-api_1.1_spec</exclude>-->
-<!--                                            <exclude>org.jboss.spec.javax.transaction:jboss-transaction-api_1.2_spec</exclude>-->
-<!--                                            <exclude>org.jboss.spec.javax.xml.soap:jboss-saaj-api_1.3_spec</exclude>-->
-<!--                                            <exclude>org.ops4j.base</exclude>-->
-<!--                                            <exclude>org.ops4j.pax.swissbox</exclude>-->
-<!--                                            <exclude>org.ops4j.pax.web</exclude>-->
-<!--                                            <exclude>org.slf4j:slf4j-nop</exclude>-->
-<!--                                            <exclude>org.slf4j:slf4j-jdk14</exclude>-->
-<!--                                            <exclude>org.slf4j:slf4j-log4j12</exclude>-->
-<!--                                            <exclude>org.slf4j:slf4j-log4j13</exclude>-->
-<!--                                            &lt;!&ndash; replaced by wildfly-elytron &ndash;&gt;-->
-<!--                                            <exclude>org.wildfly.security:wildfly-security-manager</exclude>-->
-<!--                                            <exclude>oro:oro</exclude>-->
-<!--                                            <exclude>relaxngDatatype:relaxngDatatype</exclude>-->
-<!--                                            <exclude>stax:stax-api</exclude>-->
-<!--                                            <exclude>sun-jaxb:jaxb-api</exclude>-->
-<!--                                            <exclude>trove:trove</exclude>-->
-<!--                                            <exclude>woodstox:wstx-lgpl</exclude>-->
-<!--                                            <exclude>xml-apis:xml-apis</exclude>-->
-<!--                                            &lt;!&ndash; Jandex moved to SmallRye &ndash;&gt;-->
-<!--                                            <exclude>org.jboss:jandex</exclude>-->
-<!--                                            <exclude>com.google.cloud.artifactregistry:artifactregistry-maven-wagon</exclude>-->
-<!--                                        </excludes>-->
-<!--                                    </bannedDependencies>-->
-<!--                                    <dependencyConvergence></dependencyConvergence>-->
-<!--                                </rules>-->
-<!--                            </configuration>-->
-<!--                        </execution>-->
-<!--                        <execution>-->
-<!--                            <id>require-java11</id>-->
-<!--                            <goals>-->
-<!--                                <goal>enforce</goal>-->
-<!--                            </goals>-->
-<!--                            <phase>deploy</phase>-->
-<!--                            <configuration>-->
-<!--                                <rules>-->
-<!--                                    <requireJavaVersion>-->
-<!--                                        <version>[17,18)</version>-->
-<!--                                    </requireJavaVersion>-->
-<!--                                </rules>-->
-<!--                            </configuration>-->
-<!--                        </execution>-->
-<!--                    </executions>-->
-<!--                </plugin>-->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-enforcer-plugin</artifactId>
+                    <version>${version.enforcer.plugin}</version>
+                    <executions>
+                        <execution>
+                            <id>ban-bad-dependencies</id>
+                            <goals>
+                                <goal>enforce</goal>
+                            </goals>
+                            <configuration>
+                                <rules>
+                                    <bannedDependencies>
+                                        <searchTransitive>true</searchTransitive>
+                                        <excludes>
+                                            <exclude>args4j:args4j</exclude>
+                                            <exclude>biz.aQute:bnd</exclude>
+                                            <exclude>ch.qos.reload4j:reload4j</exclude>
+                                            <exclude>com.google.gwt.inject:gin</exclude>
+                                            <exclude>com.google.inject:guice</exclude>
+                                            <exclude>com.gwtplatform:gwtp-all</exclude>
+                                            <exclude>com.sun.activation:javax.activation</exclude>
+                                            <exclude>com.sun.mail:javax.mail</exclude>
+                                            <exclude>com.sun.xml.bind:jaxb-core</exclude>
+                                            <exclude>com.sun.xml.bind:jaxb-impl</exclude>
+                                            <exclude>com.sun.xml.bind:jaxb-xjc</exclude>
+                                            <exclude>commons-httpclient:commons-httpclient</exclude>
+                                            <exclude>commons-logging:commons-logging</exclude>
+                                            <exclude>commons-logging:commons-logging-api</exclude>
+                                            <exclude>concurrent:concurrent</exclude>
+                                            <exclude>dom4j:dom4j</exclude>
+                                            <exclude>jacorb:jacorb</exclude>
+                                            <exclude>javassist:javassist</exclude>
+                                            <exclude>javax.activation:activation</exclude>
+                                            <exclude>javax.activation:javax.activation-api</exclude>
+                                            <exclude>javax.enterprise:cdi-api</exclude>
+                                            <exclude>javax.inject:javax.inject</exclude>
+                                            <exclude>javax.json:javax.json-api</exclude>
+                                            <exclude>javax.persistence:javax.persistence-api</exclude>
+                                            <exclude>javax.persistence:persistence-api</exclude>
+                                            <exclude>javax.security.enterprise:javax.security.enterprise-api</exclude>
+                                            <exclude>javax.servlet:servlet-api</exclude>
+                                            <exclude>javax.transaction:jta</exclude>
+                                            <exclude>javax.validation:validation-api</exclude>
+                                            <exclude>javax.xml:jaxrpc-api</exclude>
+                                            <exclude>javax.xml.bind:jaxb-api</exclude>
+                                            <exclude>javax.xml.soap:saaj-api</exclude>
+                                            <exclude>javax.xml.stream:stax-api</exclude>
+                                            <exclude>jboss:jboss-logging-spi</exclude>
+                                            <exclude>jboss:jboss-serialization</exclude>
+                                            <exclude>jboss.web:el-api</exclude>
+                                            <exclude>jboss.web:jsp-api</exclude>
+                                            <exclude>jboss.web:servlet-api</exclude>
+                                            <exclude>log4j:log4j</exclude>
+                                            <exclude>net.sf.kxml:kxml2</exclude>
+                                            <exclude>org.apache.geronimo.specs:geronimo-activation_1.1_spec</exclude>
+                                            <exclude>org.apache.geronimo.specs:geronimo-jaxb_2.1_spec</exclude>
+                                            <exclude>org.apache.geronimo.specs:geronimo-saaj_1.3_spec</exclude>
+                                            <exclude>org.apache.geronimo.specs:geronimo-stax-api_1.0_spec</exclude>
+                                            <exclude>org.apache.xalan:serializer</exclude>
+                                            <exclude>org.apache.xalan:xalan</exclude>
+                                            <!-- replaced by org.bouncycastle:*-jdk18on -->
+                                            <exclude>org.bouncycastle:bcpg-jdk15on</exclude>
+                                            <exclude>org.bouncycastle:bcprov-jdk15on</exclude>
+                                            <exclude>org.bouncycastle:bcpkix-jdk15on</exclude>
+                                            <exclude>org.bouncycastle:bcutil-jdk15on</exclude>
+                                            <exclude>org.codehaus.jackson:jackson-core-asl</exclude>
+                                            <exclude>org.codehaus.jackson:jackson-jaxrs</exclude>
+                                            <exclude>org.codehaus.jackson:jackson-mapper-asl</exclude>
+                                            <exclude>org.codehaus.jackson:jackson-xc</exclude>
+                                            <exclude>org.glassfish:javax.json</exclude>
+                                            <exclude>org.glassfish.soteria:javax.security.enterprise</exclude>
+                                            <exclude>org.hibernate:ejb3-persistence</exclude>
+                                            <exclude>org.hibernate.java-persistence:jpa-api</exclude>
+                                            <!-- replaced by wildfly-naming-client -->
+                                            <exclude>org.jboss:jboss-remote-naming</exclude>
+                                            <!--<exclude>org.jboss:jboss-common-core</exclude>-->
+                                            <exclude>org.jboss.integration:jboss-jca-spi</exclude>
+                                            <exclude>org.jboss.interceptor:jboss-interceptor-api</exclude>
+                                            <exclude>org.jboss.javaee:jboss-javaee</exclude>
+                                            <exclude>org.jboss.javaee:jboss-jacc-api</exclude>
+                                            <exclude>org.jboss.javaee:jboss-jad-api</exclude>
+                                            <exclude>org.jboss.javaee:jboss-jaspi-api</exclude>
+                                            <exclude>org.jboss.javaee:jboss-jca-api</exclude>
+                                            <exclude>org.jboss.javaee:jboss-jms-api</exclude>
+                                            <exclude>org.jboss.javaee:servlet-api</exclude>
+                                            <exclude>org.jboss.javaee:jsp-api</exclude>
+                                            <exclude>org.jboss.javaee:jboss-transaction-api</exclude>
+                                            <exclude>org.jboss.logging:jboss-logging-generator</exclude>
+                                            <exclude>org.jboss.logging:jboss-logging-log4j</exclude>
+                                            <exclude>org.jboss.logging:jboss-logging-jdk</exclude>
+                                            <exclude>org.jboss.logging:jboss-logging-logmanager</exclude>
+                                            <exclude>org.jboss.logging:jboss-logging-spi</exclude>
+                                            <exclude>org.jboss.logging:jboss-logging-tools</exclude>
+                                            <!-- replaced by io.netty:netty -->
+                                            <exclude>org.jboss.netty:netty</exclude>
+                                            <!-- replaced by io.netty:netty-all -->
+                                            <exclude>io.netty:netty</exclude>
+                                            <exclude>org.jboss.remoting3:jboss-remoting</exclude>
+                                            <exclude>org.jboss.security:jbosssx</exclude>
+                                            <!-- replaced by wildfly-elytron -->
+                                            <exclude>org.jboss.sasl:jboss-sasl</exclude>
+                                            <exclude>org.jboss.slf4j:slf4j-jboss-logging</exclude>
+                                            <exclude>org.jboss.spec.javax.resource:jboss-connector-api_1.5_spec</exclude>
+                                            <exclude>org.jboss.spec.javax.transaction:jboss-transaction-api_1.1_spec</exclude>
+                                            <exclude>org.jboss.spec.javax.transaction:jboss-transaction-api_1.2_spec</exclude>
+                                            <exclude>org.jboss.spec.javax.xml.soap:jboss-saaj-api_1.3_spec</exclude>
+                                            <exclude>org.ops4j.base</exclude>
+                                            <exclude>org.ops4j.pax.swissbox</exclude>
+                                            <exclude>org.ops4j.pax.web</exclude>
+                                            <exclude>org.slf4j:slf4j-nop</exclude>
+                                            <exclude>org.slf4j:slf4j-jdk14</exclude>
+                                            <exclude>org.slf4j:slf4j-log4j12</exclude>
+                                            <exclude>org.slf4j:slf4j-log4j13</exclude>
+                                            <!-- replaced by wildfly-elytron -->
+                                            <exclude>org.wildfly.security:wildfly-security-manager</exclude>
+                                            <exclude>oro:oro</exclude>
+                                            <exclude>relaxngDatatype:relaxngDatatype</exclude>
+                                            <exclude>stax:stax-api</exclude>
+                                            <exclude>sun-jaxb:jaxb-api</exclude>
+                                            <exclude>trove:trove</exclude>
+                                            <exclude>woodstox:wstx-lgpl</exclude>
+                                            <exclude>xml-apis:xml-apis</exclude>
+                                            <!-- Jandex moved to SmallRye -->
+                                            <exclude>org.jboss:jandex</exclude>
+                                        </excludes>
+                                    </bannedDependencies>
+                                    <dependencyConvergence></dependencyConvergence>
+                                </rules>
+                            </configuration>
+                        </execution>
+                        <execution>
+                            <id>require-java11</id>
+                            <goals>
+                                <goal>enforce</goal>
+                            </goals>
+                            <phase>deploy</phase>
+                            <configuration>
+                                <rules>
+                                    <requireJavaVersion>
+                                        <version>[17,18)</version>
+                                    </requireJavaVersion>
+                                </rules>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
                 <plugin>
                     <!--This plugin here is bogus, only here to make eclipse not break down and cry when it sees maven project.-->
                     <groupId>org.eclipse.m2e</groupId>
@@ -1421,7 +1359,7 @@
             <extension>
                 <groupId>com.google.cloud.artifactregistry</groupId>
                 <artifactId>artifactregistry-maven-wagon</artifactId>
-                <version>2.2.5</version>
+<!--                <version>2.1.0</version>-->
             </extension>
         </extensions>
     </build>
@@ -1690,15 +1628,13 @@
                             </execution>
                             <execution>
                                 <id>remove-remote-repositories-metadata</id>
-                                <!-- Uruchamia się po kompilacji, ale tuż przed testami -->
                                 <phase>process-test-classes</phase>
                                 <goals>
                                     <goal>run</goal>
                                 </goals>
                                 <configuration>
                                     <target>
-                                        <echo message="Czyszczenie plików _remote.repositories na Jenkinsie..." />
-                                        <!-- Usuwa wszystkie pliki _remote.repositories z lokalnego repozytorium -->
+                                        <echo message="Clean files _remote.repositories na Jenkinsie..." />
                                         <delete>
                                             <fileset dir="${settings.localRepository}" includes="**/_remote.repositories" />
                                             <fileset dir="${settings.localRepository}" includes="**/_maven.repositories" />
@@ -1742,16 +1678,6 @@
                     <name>JBoss Staging Repository Group</name>
                     <url>https://repository.jboss.org/nexus/content/groups/staging/</url>
                     <layout>default</layout>
-                </repository>
-                <repository>
-                    <id>repo-1</id>
-                    <url>https://europe-west3-maven.pkg.dev/psi-de-0-dev-cft-pjfc/maven-group-all/</url>
-                    <releases>
-                        <enabled>true</enabled>
-                    </releases>
-                    <snapshots>
-                        <enabled>true</enabled>
-                    </snapshots>
                 </repository>
             </repositories>
             <pluginRepositories>
