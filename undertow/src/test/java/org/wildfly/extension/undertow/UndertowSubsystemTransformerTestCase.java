@@ -25,7 +25,6 @@ import org.jboss.as.subsystem.test.KernelServicesBuilder;
 import org.jboss.as.subsystem.test.LegacyKernelServicesInitializer;
 import org.jboss.dmr.ModelNode;
 import org.junit.Assert;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -107,7 +106,6 @@ public class UndertowSubsystemTransformerTestCase extends AbstractSubsystemTest 
         }
     }
 
-    @Ignore("Doesn't work with GAR")
     @Test
     public void testTransformations() throws Exception {
         KernelServicesBuilder builder = this.createKernelServicesBuilder(this.createAdditionalInitialization()).setSubsystemXml(this.readResource("undertow-transform.xml"));
@@ -122,7 +120,6 @@ public class UndertowSubsystemTransformerTestCase extends AbstractSubsystemTest 
         this.checkSubsystemModelTransformation(services, this.modelVersion, fixer, false);
     }
 
-    @Ignore("Doesn't work with GAR")
     @Test
     public void testRejections() throws Exception {
         KernelServicesBuilder builder = this.createKernelServicesBuilder(this.createAdditionalInitialization());
