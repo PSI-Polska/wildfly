@@ -24,7 +24,6 @@ import org.jboss.as.subsystem.test.KernelServicesBuilder;
 import org.jboss.as.version.Stability;
 import org.jboss.dmr.ModelNode;
 import org.junit.Assert;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -50,7 +49,6 @@ public class ElytronOidcClientSubsystemTransformerTestCase extends AbstractSubsy
         this.modelVersion = version;
     }
 
-    @Ignore("Doesn't work with GAR")
     @Test
     public void testTransformations() throws Exception {
         final ModelVersion version = modelVersion;
@@ -61,7 +59,6 @@ public class ElytronOidcClientSubsystemTransformerTestCase extends AbstractSubsy
         Assert.assertTrue(transformed.isDefined());
     }
 
-    @Ignore("Doesn't work with GAR")
     @Test
     public void testRejection() throws Exception {
         testRejectingTransformers(ModelTestControllerVersion.EAP_8_0_0, "elytron-oidc-client-reject.xml", new FailedOperationTransformationConfig()
