@@ -21,7 +21,6 @@ import org.jboss.as.subsystem.test.KernelServicesBuilder;
 import org.jboss.as.subsystem.test.LegacyKernelServicesInitializer;
 import org.jboss.dmr.ModelNode;
 import org.junit.Assert;
-import org.junit.Ignore;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -74,7 +73,6 @@ public class ResourceAdaptersTransformersTestCase extends AbstractSubsystemBaseT
      *
      * @throws Exception if an error occurs during the kernel initialization or the subsystem transformation validation.
      */
-    @Ignore("Doesn't work with GAR")
     @Test
     public void test740transformers() throws Exception {
         testTransformer(ModelTestControllerVersion.EAP_7_4_0);

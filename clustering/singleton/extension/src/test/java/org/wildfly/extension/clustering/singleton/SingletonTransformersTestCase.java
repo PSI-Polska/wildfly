@@ -18,7 +18,6 @@ import org.jboss.as.subsystem.test.KernelServices;
 import org.jboss.as.subsystem.test.KernelServicesBuilder;
 import org.jboss.dmr.ModelNode;
 import org.junit.Assert;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.wildfly.clustering.singleton.SingletonCacheRequirement;
 import org.wildfly.clustering.singleton.SingletonDefaultCacheRequirement;
@@ -77,7 +76,6 @@ public class SingletonTransformersTestCase extends AbstractSubsystemTest {
                 ;
     }
 
-    @Ignore("Doesn't work with GAR")
     @Test
     public void testTransformerEAP740() throws Exception {
         this.testTransformation(ModelTestControllerVersion.EAP_7_4_0);
@@ -92,7 +90,6 @@ public class SingletonTransformersTestCase extends AbstractSubsystemTest {
         checkSubsystemModelTransformation(services, version, null, false);
     }
 
-    @Ignore("Doesn't work with GAR")
     @Test
     public void testRejectionsEAP740() throws Exception {
         this.testRejections(ModelTestControllerVersion.EAP_7_4_0);

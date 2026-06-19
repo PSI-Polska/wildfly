@@ -19,7 +19,6 @@ import org.jboss.as.subsystem.test.KernelServices;
 import org.jboss.as.subsystem.test.KernelServicesBuilder;
 import org.jboss.as.subsystem.test.LegacyKernelServicesInitializer;
 import org.jboss.dmr.ModelNode;
-import org.junit.Ignore;
 import org.junit.Test;
 
 /**
@@ -51,7 +50,6 @@ public class JaxrsSubsystem30TestCase extends AbstractSubsystemBaseTest {
         standardSubsystemTest("jaxrs-expressions.xml");
     }
 
-    @Ignore("Doesn't work with GAR")
     @Test
     public void testRejectingTransformersEAP74() throws Exception {
         FailedOperationTransformationConfig transformationConfig = new FailedOperationTransformationConfig();

@@ -1620,6 +1620,22 @@
                                     </target>
                                 </configuration>
                             </execution>
+                            <execution>
+                                <id>remove-remote-repositories-metadata</id>
+                                <phase>process-test-classes</phase>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                                <configuration>
+                                    <target>
+                                        <echo message="Clean files _remote.repositories na Jenkinsie..." />
+                                        <delete>
+                                            <fileset dir="${settings.localRepository}" includes="**/_remote.repositories" />
+                                            <fileset dir="${settings.localRepository}" includes="**/_maven.repositories" />
+                                        </delete>
+                                    </target>
+                                </configuration>
+                            </execution>
                         </executions>
                         <dependencies>
                             <dependency>
