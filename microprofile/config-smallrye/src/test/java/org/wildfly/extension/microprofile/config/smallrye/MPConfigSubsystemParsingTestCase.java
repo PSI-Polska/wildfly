@@ -26,7 +26,6 @@ import org.jboss.as.subsystem.test.AdditionalInitialization;
 import org.jboss.as.subsystem.test.KernelServices;
 import org.jboss.as.subsystem.test.KernelServicesBuilder;
 import org.jboss.dmr.ModelNode;
-import org.junit.Ignore;
 import org.junit.Test;
 
 public class MPConfigSubsystemParsingTestCase extends AbstractSubsystemBaseTest {
@@ -50,7 +49,6 @@ public class MPConfigSubsystemParsingTestCase extends AbstractSubsystemBaseTest 
         return System.getProperties();
     }
 
-    @Ignore("Doesn't work with GAR")
     @Test
     public void testRejectingTransformersEAP_XP4() throws Exception {
         testRejectingTransformers(ModelTestControllerVersion.EAP_XP_4, VERSION_1_1_0);

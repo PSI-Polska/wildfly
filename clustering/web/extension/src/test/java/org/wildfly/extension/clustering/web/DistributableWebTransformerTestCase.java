@@ -20,7 +20,6 @@ import org.jboss.as.subsystem.test.KernelServices;
 import org.jboss.as.subsystem.test.KernelServicesBuilder;
 import org.jboss.dmr.ModelNode;
 import org.junit.Assert;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -120,7 +119,6 @@ public class DistributableWebTransformerTestCase extends AbstractSubsystemTest {
     /**
      * Tests transformation of model from current version into specified version.
      */
-    @Ignore("Doesn't work with GAR")
     @Test
     public void testTransformation() throws Exception {
         String subsystemXmlResource = String.format("distributable-web-transform-%s.xml", this.version);
@@ -148,7 +146,6 @@ public class DistributableWebTransformerTestCase extends AbstractSubsystemTest {
     /**
      * Tests rejected transformation of the model from current version into specified version.
      */
-    @Ignore("Doesn't work with GAR")
     @Test
     public void testRejections() throws Exception {
         // create builder for current subsystem version

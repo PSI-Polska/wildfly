@@ -22,7 +22,6 @@ import org.jboss.as.subsystem.test.KernelServicesBuilder;
 import org.jboss.as.version.Stability;
 import org.jboss.dmr.ModelNode;
 import org.junit.Assert;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.wildfly.extension.micrometer.prometheus.PrometheusRegistryDefinitionRegistrar;
 
@@ -36,7 +35,6 @@ public class SubsystemTransformersTestCase extends AbstractSubsystemTest {
         super(MicrometerConfigurationConstants.NAME, new MicrometerExtension());
     }
 
-    @Ignore("Doesn't work with GAR")
     @Test
     public void testTransformers_1_1_0() throws Exception {
         ModelVersion modelVersion = MicrometerSubsystemModel.VERSION_1_1_0.getVersion();
@@ -61,7 +59,6 @@ public class SubsystemTransformersTestCase extends AbstractSubsystemTest {
         Assert.assertTrue(transformed.isDefined());
     }
 
-    @Ignore("Doesn't work with GAR")
     @Test
     public void testRejectingTransformers_1_0_0() throws Exception {
         ModelVersion modelVersion = MicrometerSubsystemModel.VERSION_1_1_0.getVersion();
