@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suppressions xmlns="https://jeremylong.github.io/DependencyCheck/dependency-suppression.1.3.xsd">
 
+    <suppress>
+        <notes><![CDATA[
+   file name: activemq-artemis-native-2.0.0.jar
+   Explanation: Marked as false positive. This vulnerability affects artemis not activemq-artemis-native.
+   ]]></notes>
+        <packageUrl regex="true">^pkg:maven/org\.apache\.activemq/activemq-artemis-native@2\.0\.0$</packageUrl>
+        <cve>CVE-2023-50780</cve>
+        <cve>CVE-2017-12174</cve>
+        <cve>CVE-2021-26117</cve>
+        <cve>CVE-2022-23913</cve>
+    </suppress>
+
     <!-- [wildfly] Applies to versions prior to wildfly 25.0.0 -->
     <suppress>
         <notes><![CDATA[
