@@ -399,8 +399,9 @@
         <version.io.micrometer>1.12.0</version.io.micrometer>
         <version.io.netty>4.1.135.Final</version.io.netty>
         <version.io.opentelemetry.opentelemetry>1.63.0</version.io.opentelemetry.opentelemetry>
-        <version.io.opentelemetry.proto>0.20.0-alpha</version.io.opentelemetry.proto>
-        <version.io.opentelemetry.opentelemetry-semconv>1.21.0-alpha</version.io.opentelemetry.opentelemetry-semconv>
+        <version.io.opentelemetry.proto>1.0.0-alpha</version.io.opentelemetry.proto>
+        <version.io.opentelemetry.opentelemetry-semconv>1.25.0-alpha</version.io.opentelemetry.opentelemetry-semconv>
+        <version.io.opentelemetry.instrumentation>1.33.0</version.io.opentelemetry.instrumentation>
         <version.io.perfmark>0.23.0</version.io.perfmark>
         <version.io.reactivex.rxjava2>2.2.21</version.io.reactivex.rxjava2>
         <version.io.reactivex.rxjava3>3.1.8</version.io.reactivex.rxjava3>

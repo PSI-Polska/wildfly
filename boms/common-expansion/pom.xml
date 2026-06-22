@@ -458,7 +458,7 @@
             <dependency>
                 <groupId>io.opentelemetry</groupId>
                 <artifactId>opentelemetry-api-events</artifactId>
-                <version>${version.io.opentelemetry.opentelemetry}-alpha</version>
+                <version>${version.io.opentelemetry.opentelemetry-semconv}</version>
                 <exclusions>
                     <exclusion>
                         <groupId>*</groupId>
@@ -590,7 +590,7 @@
             <dependency>
                 <groupId>io.opentelemetry</groupId>
                 <artifactId>opentelemetry-semconv</artifactId>
-                <version>${version.io.opentelemetry.opentelemetry}-alpha</version>
+                <version>${version.io.opentelemetry.opentelemetry-semconv}</version>
                 <exclusions>
                     <exclusion>
                         <groupId>*</groupId>
@@ -601,7 +601,7 @@
             <dependency>
                 <groupId>io.opentelemetry.instrumentation</groupId>
                 <artifactId>opentelemetry-instrumentation-api</artifactId>
-                <version>${version.io.opentelemetry.opentelemetry}</version>
+                <version>${version.io.opentelemetry.instrumentation}</version>
                 <exclusions>
                     <exclusion>
                         <groupId>*</groupId>
@@ -612,7 +612,7 @@
             <dependency>
                 <groupId>io.opentelemetry.instrumentation</groupId>
                 <artifactId>opentelemetry-instrumentation-api-semconv</artifactId>
-                <version>${version.io.opentelemetry.opentelemetry}-alpha</version>
+                <version>${version.io.opentelemetry.opentelemetry-semconv}</version>
                 <exclusions>
                     <exclusion>
                         <groupId>*</groupId>
@@ -623,7 +623,7 @@
             <dependency>
                 <groupId>io.opentelemetry.instrumentation</groupId>
                 <artifactId>opentelemetry-instrumentation-annotations</artifactId>
-                <version>${version.io.opentelemetry.opentelemetry}</version>
+                <version>${version.io.opentelemetry.instrumentation}</version>
                 <exclusions>
                     <exclusion>
                         <groupId>*</groupId>
@@ -634,7 +634,7 @@
             <dependency>
                 <groupId>io.opentelemetry.instrumentation</groupId>
                 <artifactId>opentelemetry-instrumentation-annotations-support</artifactId>
-                <version>${version.io.opentelemetry.opentelemetry}-alpha</version>
+                <version>${version.io.opentelemetry.instrumentation}-alpha</version>
                 <exclusions>
                     <exclusion>
                         <groupId>*</groupId>
@@ -645,7 +645,7 @@
             <dependency>
                 <groupId>io.opentelemetry.instrumentation</groupId>
                 <artifactId>opentelemetry-java-http-client</artifactId>
-                <version>${version.io.opentelemetry.opentelemetry}-alpha</version>
+                <version>${version.io.opentelemetry.instrumentation}</version>
                 <exclusions>
                     <exclusion>
                         <groupId>*</groupId>
