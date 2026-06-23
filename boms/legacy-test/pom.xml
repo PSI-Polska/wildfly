@@ -49,7 +49,7 @@
             <dependency>
                 <groupId>io.netty</groupId>
                 <artifactId>netty-all</artifactId>
-                <!-- use the Netty version required by HornetQ 2.4.7.Final -->
+                <!-- use the Netty version required by HornetQ 2.4.9.Final -->
                 <version>${legacy.version.io.netty}</version>
             </dependency>
 
