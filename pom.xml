@@ -396,7 +396,7 @@
         <version.gnu.getopt>1.0.13</version.gnu.getopt>
         <version.io.agroal>2.0</version.io.agroal>
         <version.io.grpc>1.58.0</version.io.grpc>
-        <version.io.micrometer>1.12.0</version.io.micrometer>
+        <version.io.micrometer>1.13.1</version.io.micrometer>
         <version.io.netty>4.1.135.Final</version.io.netty>
         <version.io.opentelemetry.opentelemetry>1.63.0</version.io.opentelemetry.opentelemetry>
         <version.io.opentelemetry.proto>1.0.0-alpha</version.io.opentelemetry.proto>
