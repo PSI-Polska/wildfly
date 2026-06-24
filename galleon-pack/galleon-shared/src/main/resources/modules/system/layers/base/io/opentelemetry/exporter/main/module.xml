@@ -16,7 +16,6 @@
 
     <dependencies>
         <module name="io.opentelemetry.api"/>
-        <module name="io.opentelemetry.sdk.metrics"/>
         <module name="io.opentelemetry.sdk"/>
         <module name="io.opentelemetry.context"/>
         <module name="io.opentelemetry.otlp"/>
