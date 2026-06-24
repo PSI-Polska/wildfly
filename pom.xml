@@ -118,6 +118,8 @@
         <jboss.as.scm.connection>git@github.com:wildfly/wildfly.git</jboss.as.scm.connection>
         <jboss.as.scm.url>https://github.com/wildfly/wildfly</jboss.as.scm.url>
 
+        <licenses.skip>true</licenses.skip>
+
         <!-- Other release identification information that drives how the built server identifies itself -->
         <full.dist.product.release.name>WildFly Full</full.dist.product.release.name>
         <full.dist.product.slot>main</full.dist.product.slot>
