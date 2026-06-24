@@ -86,7 +86,7 @@ public class MicrometerOtelIntegrationTestCase {
         }
     }
 
-    @Ignore("Ignore afret update opentelemetry to version 1.63.0")
+    @Ignore("PJFCB-21933 Ignore after update opentelemetry to version 1.63.0")
     @Test
     @InSequence(3)
     public void checkCounter() {
