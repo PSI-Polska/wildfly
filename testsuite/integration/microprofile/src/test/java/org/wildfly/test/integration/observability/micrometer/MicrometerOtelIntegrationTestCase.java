@@ -32,6 +32,7 @@ import org.junit.runner.RunWith;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.Arrays;
+import org.junit.Ignore;
 
 @RunWith(Arquillian.class)
 @ServerSetup(MicrometerSetupTask.class)
