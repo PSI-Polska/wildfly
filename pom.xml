@@ -109,7 +109,6 @@
     </scm>
 
     <properties>
-        <licenses.skip>true</licenses.skip>
         <!-- Release Info.
              Drives properties that end up in MANIFEST.mf files produced by this build
              and some are also used in the pom 'scm' element.
