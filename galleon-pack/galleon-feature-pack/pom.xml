@@ -122,6 +122,7 @@
                         </goals>
                         <phase>process-resources</phase>
                         <configuration>
+                            <skip>true</skip>
                             <generateVersionProperty>true</generateVersionProperty>
                             <sortByGroupIdAndArtifactId>true</sortByGroupIdAndArtifactId>
                             <licensesConfigFiles>
