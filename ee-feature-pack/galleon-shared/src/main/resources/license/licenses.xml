@@ -12,6 +12,9 @@
             <licenses>
                 <license>
                     <name>Apache License 2.0</name>
+                    <aliases>
+                        <alias>asl</alias>
+                    </aliases>
                 </license>
                 <license>
                     <name>BSD 3-Clause "New" or "Revised" License</name>
@@ -90,6 +93,9 @@
                 </license>
                 <license>
                     <name>Apache License 2.0</name>
+                    <aliases>
+                        <alias>asl</alias>
+                    </aliases>
                 </license>
             </licenses>
         </dependency>
