@@ -163,7 +163,6 @@
                             <licensesOutputFile>${license.directory}/wildfly-ee-feature-pack-licenses.xml</licensesOutputFile>
                             <excludedGroups>org.wildfly.galleon-plugins</excludedGroups>
                             <excludedArtifacts>wildfly-standard-ee-bom|wildfly-ee-feature-pack-galleon-shared|wildfly-ee-feature-pack-galleon-local|wildfly-common-ee-dependency-management|wildfly-jar-boot|wildfly-core-feature-pack-common|wildfly-core-feature-pack-galleon-common|wildfly-core-feature-pack-galleon-pruned|wildfly-elytron\z</excludedArtifacts>
-                            <failOnUnknown>false</failOnUnknown>
                         </configuration>
                     </execution>
                 </executions>
