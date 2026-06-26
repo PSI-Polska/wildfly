@@ -24,14 +24,5 @@
                 </license>
             </licenses>
         </dependency>
-        <dependency>
-            <groupId>org.jboss</groupId>
-            <artifactId>jboss-vfs</artifactId>
-            <licenses>
-                <license>
-                    <name>asl</name>
-                </license>
-            </licenses>
-        </dependency>
     </dependencies>
 </licenseSummary>
