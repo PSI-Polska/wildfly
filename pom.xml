@@ -1354,19 +1354,7 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-dependency-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>go-offline-before-tests</id>
-                        <phase>process-test-classes</phase>
-                        <goals><!-- Get all libraries -->
-                            <goal>go-offline</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
+
         </plugins>
     </build>
 
