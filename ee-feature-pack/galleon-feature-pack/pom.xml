@@ -151,7 +151,7 @@
                         <goals>
                             <goal>insert-versions</goal>
                         </goals>
-                        <phase>process-resources</phase>
+                        <phase>none</phase>
                         <configuration>
                             <generateVersionProperty>true</generateVersionProperty>
                             <sortByGroupIdAndArtifactId>true</sortByGroupIdAndArtifactId>
