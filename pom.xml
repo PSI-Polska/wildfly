@@ -920,6 +920,7 @@
                             <!--<org.jboss.model.test.maven.repository.urls>${org.jboss.model.test.maven.repository.urls}</org.jboss.model.test.maven.repository.urls>-->
                             <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
                             <jdk.xml.enableTemplatesImplDeserialization>true</jdk.xml.enableTemplatesImplDeserialization>
+                            <maven.repo.local>${settings.localRepository}</maven.repo.local>
                         </systemPropertyVariables>
                         <argLine>${surefire.system.args}</argLine>
                     </configuration>
@@ -1757,12 +1758,4 @@
             </build>
         </profile>
     </profiles>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.wildfly.core</groupId>
-            <artifactId>wildfly-subsystem-test-framework</artifactId>
-            <version>23.0.3-13-PSI</version>
-        </dependency>
-    </dependencies>
 </project>
