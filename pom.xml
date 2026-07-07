@@ -920,8 +920,7 @@
                             <!--<org.jboss.model.test.maven.repository.urls>${org.jboss.model.test.maven.repository.urls}</org.jboss.model.test.maven.repository.urls>-->
                             <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
                             <jdk.xml.enableTemplatesImplDeserialization>true</jdk.xml.enableTemplatesImplDeserialization>
-                            <maven.repo.local>${settings.localRepository}</maven.repo.local>
-                        </systemPropertyVariables>
+                            </systemPropertyVariables>
                         <argLine>${surefire.system.args}</argLine>
                     </configuration>
                 </plugin>
