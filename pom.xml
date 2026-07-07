@@ -1770,14 +1770,15 @@
         </profile>
     </profiles>
     <dependencies>
-        <dependency>
-            <groupId>org.wildfly.core</groupId>
-            <artifactId>wildfly-subsystem-test</artifactId>
-            <type>pom</type>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.wildfly.core</groupId>-->
+<!--            <artifactId>wildfly-subsystem-test</artifactId>-->
+<!--            <type>pom</type>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>org.wildfly.core</groupId>
             <artifactId>wildfly-subsystem-test-framework</artifactId>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 </project>
