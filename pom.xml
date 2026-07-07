@@ -1757,4 +1757,11 @@
             </build>
         </profile>
     </profiles>
+    <dependencies>
+        <dependency>
+            <groupId>org.wildfly.core</groupId>
+            <artifactId>wildfly-subsystem-test</artifactId>
+            <type>pom</type>
+        </dependency>
+    </dependencies>
 </project>
