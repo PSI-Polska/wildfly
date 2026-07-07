@@ -1763,5 +1763,9 @@
             <artifactId>wildfly-subsystem-test</artifactId>
             <type>pom</type>
         </dependency>
+        <dependency>
+            <groupId>org.wildfly.core</groupId>
+            <artifactId>wildfly-subsystem-test-framework</artifactId>
+        </dependency>
     </dependencies>
 </project>
