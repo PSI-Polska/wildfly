@@ -1334,15 +1334,7 @@
         </pluginManagement>
 
         <plugins>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-surefire-plugin</artifactId>
-                    <configuration>
-                        <systemPropertyVariables>
-                            <maven.repo.local>${session.localRepository.basedir.absolutePath}</maven.repo.local>
-                        </systemPropertyVariables>
-                    </configuration>
-                </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
@@ -1351,9 +1343,6 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <configuration>
-                    <systemPropertyVariables>
-                        <maven.repo.local>${settings.localRepository}</maven.repo.local>
-                    </systemPropertyVariables>
                 </configuration>
                 <executions>
                     <execution>
@@ -1643,8 +1632,8 @@
                                     <target>
                                         <echo message="Clean files _remote.repositories na Jenkinsie..." />
                                         <delete>
-                                            <fileset dir="${session.localRepository.basedir.absolutePath}" includes="**/_remote.repositories" />
-                                            <fileset dir="${session.localRepository.basedir.absolutePath}" includes="**/_maven.repositories" />
+                                            <fileset dir="${settings.localRepository}" includes="**/_remote.repositories" />
+                                            <fileset dir="${settings.localRepository}" includes="**/_maven.repositories" />
                                         </delete>
                                     </target>
                                 </configuration>
