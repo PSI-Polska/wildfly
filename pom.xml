@@ -557,6 +557,7 @@
     </properties>
 
     <dependencyManagement>
+
         <dependencies>
             <!-- Import the core parent to get all the managed dependencies from core -->
             <dependency>
@@ -919,7 +920,7 @@
                             <!--<org.jboss.model.test.maven.repository.urls>${org.jboss.model.test.maven.repository.urls}</org.jboss.model.test.maven.repository.urls>-->
                             <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
                             <jdk.xml.enableTemplatesImplDeserialization>true</jdk.xml.enableTemplatesImplDeserialization>
-                            </systemPropertyVariables>
+                        </systemPropertyVariables>
                         <argLine>${surefire.system.args}</argLine>
                     </configuration>
                 </plugin>
@@ -1334,7 +1335,6 @@
         </pluginManagement>
 
         <plugins>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
