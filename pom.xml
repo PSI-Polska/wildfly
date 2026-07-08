@@ -557,7 +557,6 @@
     </properties>
 
     <dependencyManagement>
-
         <dependencies>
             <!-- Import the core parent to get all the managed dependencies from core -->
             <dependency>
