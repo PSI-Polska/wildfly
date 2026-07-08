@@ -419,7 +419,6 @@
     </suppress>
 
     <!--  CVE-2026-39883 and CVE-2026-24051 is for OpenTelemetry-Go implementation   -->
-    <!--  CVE-2026-45292 is for OpenTelemetry-Java implementation, opentelemetry is not use in WildFly server for PJF   -->
     <suppress>
         <notes><![CDATA[
    file name: opentelemetry-*.jar
@@ -427,7 +426,6 @@
         <packageUrl regex="true">^pkg:maven/io\.opentelemetry.*/.*@.*$</packageUrl>
         <cve>CVE-2026-39883</cve>
         <cve>CVE-2026-24051</cve>
-        <cve>CVE-2026-45292</cve>
 
     </suppress>
 
