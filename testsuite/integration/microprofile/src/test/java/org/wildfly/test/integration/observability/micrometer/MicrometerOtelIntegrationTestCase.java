@@ -32,6 +32,7 @@ import org.junit.runner.RunWith;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.Arrays;
+import org.junit.Ignore;
 
 @RunWith(Arquillian.class)
 @ServerSetup(MicrometerSetupTask.class)
@@ -86,6 +87,7 @@ public class MicrometerOtelIntegrationTestCase {
         }
     }
 
+    @Ignore("PJFCB-21933 Ignore after update opentelemetry to version 1.63.0")
     @Test
     @InSequence(3)
     public void checkCounter() {
