@@ -313,6 +313,7 @@
         <dependency>
             <groupId>commons-beanutils</groupId>
             <artifactId>commons-beanutils</artifactId>
+            <version>${version.commons-beanutils}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
