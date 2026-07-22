@@ -298,9 +298,12 @@
     <suppress>
         <notes><![CDATA[
    file name: vertx-kafka-client-4.4.6.jar
+   CVE-2026-15075 and CVE-2026-15076 does not affect vertx-kafka-client.
    ]]></notes>
         <packageUrl regex="true">^pkg:maven/io\.vertx/vertx-kafka-client@.*$</packageUrl>
         <cve>CVE-2024-8391</cve>
+        <cve>CVE-2026-15075</cve>
+        <cve>CVE-2026-15076</cve>
     </suppress>
 
     <!-- Affected package lucene.replicator does not occur in WildFly 31 -->
