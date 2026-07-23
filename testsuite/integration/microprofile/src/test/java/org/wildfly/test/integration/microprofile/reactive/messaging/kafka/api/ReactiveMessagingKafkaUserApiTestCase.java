@@ -7,10 +7,10 @@ package org.wildfly.test.integration.microprofile.reactive.messaging.kafka.api;
 
 import io.smallrye.reactive.messaging.kafka.api.IncomingKafkaRecordMetadata;
 import jakarta.inject.Inject;
-import kafka.server.KafkaConfig;
 import org.apache.kafka.common.header.Header;
 import org.apache.kafka.common.header.Headers;
 import org.apache.kafka.common.record.TimestampType;
+import org.apache.kafka.server.config.ServerLogConfigs;
 import org.eclipse.microprofile.reactive.messaging.Message;
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
@@ -251,7 +251,7 @@ public class ReactiveMessagingKafkaUserApiTestCase {
 
         @Override
         protected void addBrokerProperties(Properties brokerProperties) {
-            brokerProperties.put(KafkaConfig.NumPartitionsProp(), String.valueOf(getPartitions()));
+            brokerProperties.put(ServerLogConfigs.NUM_PARTITIONS_CONFIG, String.valueOf(getPartitions()));
         }
 
         @Override
