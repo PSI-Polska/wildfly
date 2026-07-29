@@ -478,9 +478,10 @@
     <suppress>
         <notes><![CDATA[
    file name: simpleclient-0.16.0.jar
+   file name: simpleclient_common-0.16.0.jar
    CVE-2026-42154 affects prometheus server because the remote read endpoint (/api/v1/read) does not exist in Wildfly, it exists in prometheus server.
    ]]></notes>
-        <packageUrl regex="true">^pkg:maven/io\.prometheus/simpleclient@.*$</packageUrl>
+        <packageUrl regex="true">^pkg:maven/io\.prometheus/simpleclient.*@.*$</packageUrl>
         <cve>CVE-2026-42154</cve>
     </suppress>
 
