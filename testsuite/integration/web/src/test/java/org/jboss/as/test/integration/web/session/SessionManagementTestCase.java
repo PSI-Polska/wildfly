@@ -50,6 +50,7 @@ public class SessionManagementTestCase {
     private static final String GET_SESSION_LAST_ACCESSED_TIME_MILLIS = "get-session-last-accessed-time-millis";
     private static final String GET_SESSION_CREATION_TIME = "get-session-creation-time";
     private static final String GET_SESSION_CREATION_TIME_MILLIS = "get-session-creation-time-millis";
+    private static final String UNDERTOW_SESSION_ATTRIBUTE = "io.undertow.websocket.current-connections";
 
     @ArquillianResource
     public ManagementClient managementClient;
@@ -108,15 +109,23 @@ public class SessionManagementTestCase {
 
             opRes = executeOperation(operation, LIST_SESSION_ATTRIBUTE_NAMES);
             List<ModelNode> resultList = opRes.get(ModelDescriptionConstants.RESULT).asList();
-            Assert.assertEquals(1, resultList.size());
-            Assert.assertEquals(opRes.toString(), "val", resultList.get(0).asString());
+            Assert.assertEquals(2, resultList.size());
+            final List<ModelNode> valList = resultList.stream().filter(e -> "val".equals(e.asString())).toList();
+            Assert.assertEquals(1, valList.size());
+            Assert.assertEquals(opRes.toString(), "val", valList.get(0).asString());
+            final List<ModelNode> websocketList = resultList.stream().filter(e -> UNDERTOW_SESSION_ATTRIBUTE.equals(e.asString())).toList();
+            Assert.assertEquals(1, websocketList.size());
 
             opRes = executeOperation(operation, LIST_SESSION_ATTRIBUTES);
             List<Property> properties = opRes.get(ModelDescriptionConstants.RESULT).asPropertyList();
-            Assert.assertEquals(opRes.toString(), 1, properties.size());
-            Property property = properties.get(0);
+            Assert.assertEquals(opRes.toString(), 2, properties.size());
+            final List<Property> valPropertyList = properties.stream().filter(e -> "val".equals(e.getName())).toList();
+            Assert.assertEquals(opRes.toString(), 1, valPropertyList.size());
+            Property property = valPropertyList.get(0);
             Assert.assertEquals(opRes.toString(), "val", property.getName());
             Assert.assertEquals(opRes.toString(), "0", property.getValue().asString());
+            final List<Property> websocketPropertyList = properties.stream().filter(e -> UNDERTOW_SESSION_ATTRIBUTE.equals(e.getName())).toList();
+            Assert.assertEquals(1, websocketPropertyList.size());
 
             //we want to make sure that the values will be different
             //so we wait 10ms
