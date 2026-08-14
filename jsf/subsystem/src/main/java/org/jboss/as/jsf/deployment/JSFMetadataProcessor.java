@@ -10,7 +10,6 @@ import java.util.List;
 
 import jakarta.faces.application.ViewHandler;
 import org.jboss.as.controller.ModuleIdentifierUtil;
-import org.jboss.as.jsf.logging.JSFLogger;
 import org.jboss.as.server.deployment.DeploymentPhaseContext;
 import org.jboss.as.server.deployment.DeploymentUnit;
 import org.jboss.as.server.deployment.DeploymentUnitProcessingException;
