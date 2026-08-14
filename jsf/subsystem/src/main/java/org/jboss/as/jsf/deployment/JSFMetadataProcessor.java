@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.faces.application.ViewHandler;
-import org.jboss.as.jsf.logging.JSFLogger;
 import org.jboss.as.jsf.subsystem.JSFResourceDefinition;
 import org.jboss.as.server.deployment.DeploymentPhaseContext;
 import org.jboss.as.server.deployment.DeploymentUnit;
@@ -89,12 +88,6 @@ public class JSFMetadataProcessor implements DeploymentUnitProcessor {
             setContextParameterIfAbsent(webMetaData, DISALLOW_DOCTYPE_DECL, disallowDoctypeDecl.toString());
         }
         if (webMetaData.getDistributable() != null) {
-            // Auto-disable lazy bean validation for distributable web application.
-            // This can otherwise cause missing @PreDestroy events.
-            String disabled = Boolean.toString(false);
-            if (!setContextParameterIfAbsent(webMetaData, LAZY_BEAN_VALIDATION_PARAM, disabled).equals(disabled)) {
-                JSFLogger.ROOT_LOGGER.lazyBeanValidationEnabled();
-            }
 
             String version = JsfVersionMarker.getVersion(deploymentUnit);
             // Disable counter-productive "distributable" logic in Mojarra implementation
