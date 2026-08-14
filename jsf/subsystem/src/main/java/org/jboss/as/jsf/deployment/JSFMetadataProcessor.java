@@ -85,12 +85,6 @@ public class JSFMetadataProcessor implements DeploymentUnitProcessor {
             setContextParameterIfAbsent(webMetaData, WebConfiguration.BooleanWebContextInitParameter.DisallowDoctypeDecl.getQualifiedName(), disallowDoctypeDecl.toString());
         }
         if (webMetaData.getDistributable() != null) {
-            // Auto-disable lazy bean validation for distributable web application.
-            // This can otherwise cause missing @PreDestroy events.
-            String disabled = Boolean.toString(false);
-            if (!setContextParameterIfAbsent(webMetaData, WebConfiguration.BooleanWebContextInitParameter.EnableLazyBeanValidation.getQualifiedName(), disabled).equals(disabled)) {
-                JSFLogger.ROOT_LOGGER.lazyBeanValidationEnabled();
-            }
 
             String version = JsfVersionMarker.getVersion(deploymentUnit);
             // Disable counter-productive "distributable" logic in Mojarra implementation
