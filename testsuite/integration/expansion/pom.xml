@@ -35,6 +35,7 @@
         <ts.glow.config-name>standalone-microprofile.xml</ts.glow.config-name>
 
         <wildfly.test.kafka.version>${version.org.apache.kafka.test-image}</wildfly.test.kafka.version>
+        <api.version>1.44</api.version>
 
         <!-- Use the expansion bom -->
         <dependency.management.import.artifact>wildfly-standard-expansion-bom</dependency.management.import.artifact>
@@ -530,6 +531,7 @@
                     <systemPropertyVariables>
                         <jboss.install.dir>${basedir}/target/wildfly</jboss.install.dir>
                         <wildfly.test.kafka.version>${wildfly.test.kafka.version}</wildfly.test.kafka.version>
+                        <api.version>${api.version}</api.version>
                     </systemPropertyVariables>
                 </configuration>
                 <executions>
@@ -563,6 +565,7 @@
                             <systemPropertyVariables>
                                 <jboss.server.config.file.name>standalone.xml</jboss.server.config.file.name>
                                 <wildfly.test.kafka.version>${wildfly.test.kafka.version}</wildfly.test.kafka.version>
+                                <api.version>${api.version}</api.version>
                             </systemPropertyVariables>
                             <excludes>
                                 <!-- The enable-microprofile.cli script does not enable the reactive extensions/subsystems -->
