@@ -1,0 +1,22 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://example.com/vex/suppression",
+  "author": "Security Team",
+  "timestamp": "2024-01-01T00:00:00Z",
+  "version": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2024-47554"
+      },
+      "products": [
+        {
+          "@id": "pkg:maven/commons-io/commons-io@2.8.0"
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Commons-io fixed by updating to version 2.17.0, suppression for violation in shaded dependencies used in tests."
+    }
+  ]
+}
